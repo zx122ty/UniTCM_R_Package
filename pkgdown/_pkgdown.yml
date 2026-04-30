@@ -1,0 +1,90 @@
+url: https://zx122ty.github.io/unitcm/
+
+template:
+  bootstrap: 5
+
+repo:
+  url: https://github.com/zx122ty/unitcm
+
+reference:
+- title: Infrastructure
+  desc: HTTP client, authentication, and pagination helpers.
+  contents:
+  - set_base_url
+  - get_base_url
+  - set_unitcm_token
+  - get_unitcm_token
+  - clear_unitcm_token
+  - flatten_response
+  - unitcm_cache_clear
+
+- title: Herb Explorer
+  desc: Query herbs, their properties, and associated compounds.
+  contents:
+  - search_herbs
+  - get_herb
+  - fetch_herb_facets
+  - get_herb_compounds
+  - export_herbs
+  - export_herb_compounds
+
+- title: Ingredient Explorer
+  desc: Query compounds, ADMET predictions, and target predictions.
+  contents:
+  - search_compounds
+  - get_compound
+  - get_compound_admet
+  - get_compound_targets
+  - get_compound_herbs
+  - fetch_compound_facets
+  - export_compounds
+  - export_compound_module
+
+- title: Disease-Formula Atlas
+  desc: Query disease-formula associations and ICD-11 classification.
+  contents:
+  - search_formulas
+  - get_formula
+  - get_formula_doses
+  - fetch_disease_tree
+  - list_book_sources
+  - list_origin_sources
+  - list_dosage_forms
+
+- title: TCM Ontology
+  desc: Navigate and search the TCM ontology hierarchy.
+  contents:
+  - search_ontology
+  - get_ontology_entity
+  - get_ontology_children
+  - get_ontology_descendants
+  - get_ontology_ancestors
+  - fetch_ontology_tree
+  - fetch_ontology_stats
+  - list_ontology_categories
+  - get_ontology_by_level
+  - search_ontology_mapping
+  - export_ontology
+
+- title: MIDAS Gene-Disease
+  desc: Multi-source gene-disease association analysis.
+  contents:
+  - query_gene_diseases
+  - query_disease_genes
+  - convert_gene_ids
+  - query_disease_enrichment
+  - query_source_comparison
+  - query_disease_intersection
+  - autocomplete_disease
+  - fetch_midas_sources
+  - fetch_midas_stats
+
+articles:
+- title: Getting started
+  contents:
+  - unitcm
+- title: Guides
+  contents:
+  - database-queries
+  - network-pharmacology
+  - gene-disease-analysis

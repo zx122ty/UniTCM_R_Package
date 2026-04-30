@@ -1,0 +1,11 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^00-design$
+^pkgdown$
+^\.github$
+^LICENSE\.md$
+^README\.Rmd$
+^_pkgdown\.yml$
+^docs$
+^\.lintr$
+^\.gitignore$

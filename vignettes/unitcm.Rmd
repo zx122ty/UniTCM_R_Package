@@ -1,0 +1,107 @@
+---
+title: "Getting Started with unitcm"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting Started with unitcm}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE
+)
+```
+
+## Installation
+
+Install the development version from GitHub:
+
+```{r install}
+# install.packages("pak")
+pak::pkg_install("zx122ty/unitcm")
+```
+
+Or using `remotes`:
+
+```{r install-remotes}
+remotes::install_github("zx122ty/unitcm")
+```
+
+## Setup
+
+```{r setup}
+library(unitcm)
+```
+
+By default, `unitcm` connects to the public UniTCM API at
+`https://UniTCM.cn/api/v1`. You can override this if needed:
+
+```{r base-url}
+# Only needed for custom/local deployments
+set_base_url("https://UniTCM.cn/api/v1")
+```
+
+## Authentication
+
+All data-access endpoints are currently public and require no authentication.
+For future authenticated endpoints, you can set a token:
+```{r auth}
+# Via environment variable (recommended for scripts/CI)
+# Set UNITCM_TOKEN in your .Renviron
+
+# Or set in session
+set_unitcm_token("your-token-here")
+
+# Or store securely in system keyring
+set_unitcm_token("your-token-here", keyring = TRUE)
+```
+
+## Your First Query
+
+Search for herbs related to ginseng:
+
+```{r first-query}
+herbs <- search_herbs(q = "ginseng")
+herbs
+```
+
+Get detailed information for a specific herb:
+
+```{r herb-detail}
+herb <- get_herb("UNITCM_H001")
+herb$herb_english_name
+herb$efficacy
+```
+
+## Pagination
+
+Most search functions return paginated results. Use `page` and `page_size`
+to control pagination manually, or set `all_pages = TRUE` to fetch
+everything:
+
+```{r pagination}
+# Manual pagination
+page1 <- search_herbs(q = "ginseng", page = 1, page_size = 50)
+attr(page1, "total") # Total records available
+
+# Auto-pagination: fetches all pages with a progress bar
+all_herbs <- search_herbs(q = "ginseng", all_pages = TRUE)
+nrow(all_herbs)
+```
+
+## Available Modules
+
+`unitcm` provides access to these UniTCM platform modules:
+
+| Module | Key Functions |
+|--------|--------------|
+| Herb Explorer | `search_herbs()`, `get_herb()`, `get_herb_compounds()` |
+| Ingredient Explorer | `search_compounds()`, `get_compound_admet()`, `get_compound_targets()` |
+| Disease-Formula Atlas | `search_formulas()`, `get_formula_doses()`, `fetch_disease_tree()` |
+| TCM Ontology | `search_ontology()`, `get_ontology_entity()`, `export_ontology()` |
+| MIDAS Gene-Disease | `query_gene_diseases()`, `query_disease_enrichment()` |
+
+See `vignette("database-queries")` for detailed examples of each module.
