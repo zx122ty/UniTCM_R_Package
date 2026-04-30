@@ -1,11 +1,11 @@
 # unitcm <img src="man/figures/logo.png" align="right" height="139" alt="" />
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/zx122ty/unitcm/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/zx122ty/unitcm/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/zx122ty/UniTCM_R_Package/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/zx122ty/UniTCM_R_Package/actions/workflows/R-CMD-check.yaml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
 
-**unitcm** is an R client for the [UniTCM](https://UniTCM.cn) Traditional
+**unitcm** is an R client for the [UniTCM](https://unitcm.qfxulab.com/) Traditional
 Chinese Medicine multi-omics platform. It provides tidy, paginated access to
 herbs, compounds, disease-formula associations, TCM ontology, and gene-disease
 analysis (MIDAS).
@@ -14,7 +14,7 @@ analysis (MIDAS).
 
 ```r
 # install.packages("pak")
-pak::pkg_install("zx122ty/unitcm")
+pak::pkg_install("zx122ty/UniTCM_R_Package")
 ```
 
 ## Quick Start
@@ -44,8 +44,8 @@ query_disease_enrichment(c("TP53", "BRCA1", "EGFR", "VEGFA"))
 
 ## Documentation
 
-- [Getting Started](https://zx122ty.github.io/unitcm/articles/unitcm.html)
-- [Database Queries](https://zx122ty.github.io/unitcm/articles/database-queries.html)
-- [Network Pharmacology Workflow](https://zx122ty.github.io/unitcm/articles/network-pharmacology.html)
-- [Gene-Disease Analysis](https://zx122ty.github.io/unitcm/articles/gene-disease-analysis.html)
-- [Function Reference](https://zx122ty.github.io/unitcm/reference/index.html)
+- [Getting Started](https://zx122ty.github.io/UniTCM_R_Package/articles/unitcm.html)
+- [Database Queries](https://zx122ty.github.io/UniTCM_R_Package/articles/database-queries.html)
+- [Network Pharmacology Workflow](https://zx122ty.github.io/UniTCM_R_Package/articles/network-pharmacology.html)
+- [Gene-Disease Analysis](https://zx122ty.github.io/UniTCM_R_Package/articles/gene-disease-analysis.html)
+- [Function Reference](https://zx122ty.github.io/UniTCM_R_Package/reference/index.html)

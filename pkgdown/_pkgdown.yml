@@ -1,10 +1,10 @@
-url: https://zx122ty.github.io/unitcm/
+url: https://zx122ty.github.io/UniTCM_R_Package/
 
 template:
   bootstrap: 5
 
 repo:
-  url: https://github.com/zx122ty/unitcm
+  url: https://github.com/zx122ty/UniTCM_R_Package
 
 reference:
 - title: Infrastructure
