@@ -2,13 +2,13 @@ Package: unitcm
 Version: 0.1.0
 Title: R Client for the UniTCM Traditional Chinese Medicine Platform
 Description: Provides functions to query the UniTCM API
-    <https://UniTCM.cn/api/v1/>, covering herb exploration,
+    <https://unitcm.qfxulab.com/api/v1>, covering herb exploration,
     compound/ADMET data, disease-formula associations, TCM ontology,
     transcriptomics, and gene-disease analysis (MIDAS).
-Authors@R: person("Xin", "Zhang", email = "designer-why-ninja@duck.com",
+Authors@R: person("Xiao", "Zheng", email = "12519088@.zju.edu.com",
     role = c("aut", "cre"), comment = c(ORCID = "0000-0000-0000-0000"))
-Author: Xin Zhang [aut, cre] (<https://orcid.org/0000-0000-0000-0000>)
-Maintainer: Xin Zhang <designer-why-ninja@duck.com>
+Author: Xiao Zheng [aut, cre] (<https://orcid.org/0000-0000-0000-0000>)
+Maintainer: Xiao Zheng <12519088@.zju.edu.com>
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
