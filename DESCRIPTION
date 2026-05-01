@@ -5,10 +5,10 @@ Description: Provides functions to query the UniTCM API
     <https://unitcm.qfxulab.com/api/v1>, covering herb exploration,
     compound/ADMET data, disease-formula associations, TCM ontology,
     transcriptomics, and gene-disease analysis (MIDAS).
-Authors@R: person("Xiao", "Zheng", email = "12519088@.zju.edu.com",
+Authors@R: person("Xiao", "Zheng", email = "12519088@zju.edu.cn",
     role = c("aut", "cre"), comment = c(ORCID = "0009-0000-3918-5725"))
 Author: Xiao Zheng [aut, cre] (<https://orcid.org/0009-0000-3918-5725>)
-Maintainer: Xiao Zheng <12519088@.zju.edu.com>
+Maintainer: Xiao Zheng <12519088@zju.edu.cn>
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
