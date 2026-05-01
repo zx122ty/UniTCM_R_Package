@@ -43,8 +43,7 @@ get_base_url <- function() {
   url <- Sys.getenv("UNITCM_BASE_URL", unset = "")
   if (nzchar(url)) return(url)
 
-  # TODO: change back to "https://UniTCM.cn/api/v1" before CRAN submission
-  "https://unitcm.qfxulab.com/:8000/api/v1"
+  "https://unitcm.qfxulab.com:8000/api/v1"
 }
 
 #' Set a UniTCM API token

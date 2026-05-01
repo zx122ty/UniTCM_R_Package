@@ -17,7 +17,7 @@ unitcm_request <- function(path, method = "GET", query = list(),
 
   req <- httr2::request(base) |>
     httr2::req_url_path_append(path) |>
-    httr2::req_user_agent("unitcm R package (https://github.com/zx122ty/unitcm)") |>
+    httr2::req_user_agent("unitcm R package (https://github.com/zx122ty/UniTCM_R_Package)") |>
     httr2::req_retry(max_tries = 3L, is_transient = is_transient_status) |>
     httr2::req_throttle(rate = 80 / 60) |>
     httr2::req_error(body = unitcm_error_body)
@@ -34,7 +34,7 @@ unitcm_request <- function(path, method = "GET", query = list(),
 
   query <- Filter(Negate(is.null), query)
   if (length(query) > 0L) {
-    req <- req |> httr2::req_url_query(!!!query)
+    req <- do.call(httr2::req_url_query, c(list(req), query))
   }
 
   if (method == "POST") {
@@ -66,7 +66,7 @@ unitcm_download <- function(path, query = list(), file, base_url = NULL) {
 
   req <- httr2::request(base) |>
     httr2::req_url_path_append(path) |>
-    httr2::req_user_agent("unitcm R package (https://github.com/zx122ty/unitcm)") |>
+    httr2::req_user_agent("unitcm R package (https://github.com/zx122ty/UniTCM_R_Package)") |>
     httr2::req_retry(max_tries = 3L, is_transient = is_transient_status) |>
     httr2::req_error(body = unitcm_error_body)
 
@@ -82,7 +82,7 @@ unitcm_download <- function(path, query = list(), file, base_url = NULL) {
 
   query <- Filter(Negate(is.null), query)
   if (length(query) > 0L) {
-    req <- req |> httr2::req_url_query(!!!query)
+    req <- do.call(httr2::req_url_query, c(list(req), query))
   }
 
   httr2::req_perform(req, path = file)
