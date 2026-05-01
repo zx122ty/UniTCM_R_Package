@@ -1,17 +1,17 @@
-# unitcm
+<h1 style="display: flex; justify-content: space-between; align-items: center;">
+  <span>unitcm</span>
+  <img src="src/icon.png" height="70">
+</h1>
 
-<p align="right">
-  <img src="src/icon.png" height="139">
+<!-- badges -->
+<p>
+  <a href="https://github.com/zx122ty/UniTCM_R_Package/actions/workflows/R-CMD-check.yaml">
+    <img src="https://github.com/zx122ty/UniTCM_R_Package/actions/workflows/R-CMD-check.yaml/badge.svg">
+  </a>
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg">
+  </a>
 </p>
-<!-- badges: start -->
-[![R-CMD-check](https://github.com/zx122ty/UniTCM_R_Package/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/zx122ty/UniTCM_R_Package/actions/workflows/R-CMD-check.yaml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-<!-- badges: end -->
-
-**unitcm** is an R client for the [UniTCM](https://unitcm.qfxulab.com/) Traditional
-Chinese Medicine multi-omics platform. It provides tidy, paginated access to
-herbs, compounds, disease-formula associations, TCM ontology, and gene-disease
-analysis (MIDAS).
 
 ## Installation
 
