@@ -1,5 +1,8 @@
-# unitcm <img src="unitcm/src/icon.png" align="right" height="139" alt="" />
+# unitcm
 
+<p align="right">
+  <img src="src/icon.png" height="139">
+</p>
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/zx122ty/UniTCM_R_Package/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/zx122ty/UniTCM_R_Package/actions/workflows/R-CMD-check.yaml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
