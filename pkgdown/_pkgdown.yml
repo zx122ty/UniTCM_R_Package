@@ -16,8 +16,29 @@ reference:
   - set_unitcm_token
   - get_unitcm_token
   - clear_unitcm_token
+  - set_api_key
+  - get_api_key
+  - clear_api_key
   - flatten_response
   - unitcm_cache_clear
+
+- title: TCMomics Database
+  desc: Browse and search multi-omics datasets.
+  contents:
+  - search_datasets
+  - get_dataset
+  - get_similar_datasets
+  - fetch_dataset_facets
+  - fetch_dataset_stats
+  - export_datasets
+
+- title: Home & Statistics
+  desc: Platform-level statistics and latest submissions.
+  contents:
+  - fetch_home_stats
+  - fetch_latest_submissions
+  - fetch_tcm_classification_stats
+  - fetch_omics_type_stats
 
 - title: Herb Explorer
   desc: Query herbs, their properties, and associated compounds.
@@ -79,6 +100,54 @@ reference:
   - autocomplete_disease
   - fetch_midas_sources
   - fetch_midas_stats
+
+- title: TCM Terms & Mechanisms
+  desc: Search TCM terms and their modern mechanisms.
+  contents:
+  - search_terms
+  - get_term
+  - list_term_sources
+  - list_term_categories
+  - search_mechanisms
+  - get_mechanism
+  - fetch_mechanism_filters
+
+- title: Transcriptome Hub
+  desc: Query TCM transcriptomics datasets and analysis results.
+  contents:
+  - search_transcriptomes
+  - get_transcriptome
+  - fetch_transcriptome_filters
+  - fetch_transcriptome_stats
+  - get_analysis_modules
+  - get_analysis_data
+
+- title: NetVis
+  desc: Network pharmacology graph queries.
+  contents:
+  - fetch_netvis_stats
+  - search_netvis
+  - get_neighbors
+  - get_subgraph
+  - find_path
+  - get_node_detail
+  - get_node_metrics
+  - detect_communities
+
+- title: Network Helpers
+  desc: Build and convert network objects locally.
+  contents:
+  - build_hct_network
+  - build_formula_herb_network
+  - as_igraph
+  - as_tidygraph
+
+- title: Visualization
+  desc: Quick plotting helpers.
+  contents:
+  - plot_network
+  - plot_enrichment
+  - plot_compound_radar
 
 articles:
 - title: Getting started
