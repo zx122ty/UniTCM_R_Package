@@ -1,4 +1,4 @@
-# unitcm <img src="man/figures/logo.png" align="right" height="139" alt="" />
+# unitcm <img src="unitcm/src/icon.png" align="right" height="139" alt="" />
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/zx122ty/UniTCM_R_Package/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/zx122ty/UniTCM_R_Package/actions/workflows/R-CMD-check.yaml)
