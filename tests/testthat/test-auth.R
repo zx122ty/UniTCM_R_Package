@@ -37,6 +37,6 @@ test_that("get_base_url returns default when unset", {
   .unitcm_env$base_url <- NULL
   withr::local_envvar(UNITCM_BASE_URL = "")
   withr::local_options(unitcm.base_url = NULL)
-  expect_equal(get_base_url(), "http://localhost:8000/api/v1")
+  expect_equal(get_base_url(), "https://unitcm.qfxulab.com/api/v1")
   .unitcm_env$base_url <- old
 })
