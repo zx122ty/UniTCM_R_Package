@@ -33,7 +33,8 @@ Suggests:
     knitr,
     rmarkdown,
     pkgdown
-URL: https://github.com/zx122ty/UniTCM_R_Package
+URL: https://zx122ty.github.io/UniTCM_R_Package/,
+    https://github.com/zx122ty/UniTCM_R_Package
 BugReports: https://github.com/zx122ty/UniTCM_R_Package/issues
 VignetteBuilder: knitr
 Config/testthat/edition: 3

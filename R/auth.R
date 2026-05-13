@@ -7,12 +7,12 @@
 #' Set the UniTCM API base URL
 #'
 #' @param url A character string. The base URL for the UniTCM API,
-#'   e.g. `"https://UniTCM.cn/api/v1"`.
+#'   e.g. `"https://unitcm.qfxulab.com/api/v1"`.
 #' @return Invisible previous URL value.
 #' @export
 #' @examples
 #' \donttest{
-#' set_base_url("https://UniTCM.cn/api/v1")
+#' set_base_url("https://unitcm.qfxulab.com/api/v1")
 #' }
 set_base_url <- function(url) {
   old <- .unitcm_env$base_url

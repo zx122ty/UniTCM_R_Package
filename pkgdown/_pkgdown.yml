@@ -2,6 +2,7 @@ url: https://zx122ty.github.io/UniTCM_R_Package/
 
 template:
   bootstrap: 5
+  favicons: false
 
 repo:
   url:
