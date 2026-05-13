@@ -1,0 +1,31 @@
+# Get similar datasets
+
+Find datasets similar to a given submission based on content similarity.
+
+## Usage
+
+``` r
+get_similar_datasets(submission_id)
+```
+
+## Arguments
+
+- submission_id:
+
+  The submission ID.
+
+## Value
+
+A [`tibble::tibble()`](https://rdrr.io/pkg/tibble/man/tibble.html) with
+columns: `submission_id`, `project_title`, `TCM_classification`,
+`similarity_score`.
+
+## Examples
+
+``` r
+# \donttest{
+get_similar_datasets("TMA2025001")
+#> Error in httr2::req_perform(req): HTTP 404 Not Found.
+#> ℹ Resource not found: Not Found
+# }
+```

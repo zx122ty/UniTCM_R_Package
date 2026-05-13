@@ -1,0 +1,228 @@
+# Database Queries
+
+``` r
+
+library(unitcm)
+```
+
+This vignette demonstrates how to query each database module in the
+UniTCM platform.
+
+## Herb Explorer
+
+### Search and filter herbs
+
+``` r
+
+# Text search
+herbs <- search_herbs(q = "ginseng")
+
+# Multi-value faceted filters
+herbs <- search_herbs(
+  flavors = c("sweet", "bitter"),
+  properties = "warm",
+  toxicity = "non-toxic"
+)
+
+# View available filter values
+facets <- fetch_herb_facets()
+facets$toxicity
+facets$meridians
+```
+
+### Herb details and compounds
+
+``` r
+
+herb <- get_herb("UNITCM_H001")
+herb$herb_english_name
+herb$efficacy
+
+# Get compounds found in this herb
+compounds <- get_herb_compounds("UNITCM_H001", all_pages = TRUE)
+head(compounds)
+```
+
+### Export data
+
+``` r
+
+export_herbs(q = "ginseng", file = "ginseng_herbs.csv")
+export_herb_compounds("UNITCM_H001", file = "ginseng_compounds.csv")
+```
+
+## Ingredient Explorer
+
+### Search compounds by properties
+
+``` r
+
+# Drug-like compounds with molecular weight 200-500
+compounds <- search_compounds(
+  mw_min = 200, mw_max = 500,
+  lipinski = "pass",
+  is_drug = TRUE
+)
+
+# Get facet statistics
+facets <- fetch_compound_facets()
+facets$mw_range
+```
+
+### Compound details, ADMET, and targets
+
+``` r
+
+# Full compound record
+compound <- get_compound("UNITCM_I00001")
+compound$component_name
+compound$xref$pubchem_cid
+
+# ADMET predictions (~90 endpoints)
+admet <- get_compound_admet("UNITCM_I00001")
+admet$caco2_permeability
+admet$hia
+
+# Predicted targets (DrugCLIP deep learning)
+targets_dc <- get_compound_targets("UNITCM_I00001", method = "drugclip")
+
+# ChEMBL similarity-based targets
+targets_ch <- get_compound_targets("UNITCM_I00001", method = "chembl")
+
+# Both sources combined
+targets_all <- get_compound_targets("UNITCM_I00001", method = "both")
+table(targets_all$source)
+```
+
+## Disease-Formula Atlas
+
+### Search formulas by disease
+
+``` r
+
+# Search by text
+formulas <- search_formulas(q = "insomnia")
+
+# Filter by ICD-11 classification
+formulas <- search_formulas(
+  level1 = "Neoplasms",
+  mapping_confidence = c("high", "medium")
+)
+
+# Browse the disease classification tree
+tree <- fetch_disease_tree()
+
+# Available filter options
+list_book_sources()
+list_origin_sources()
+list_dosage_forms()
+```
+
+### Formula details and doses
+
+``` r
+
+formula <- get_formula(1)
+formula$formula_name
+formula$efficacy
+
+# Herb composition and dosage
+doses <- get_formula_doses(1)
+doses
+```
+
+## TCM Ontology
+
+### Search and navigate the ontology
+
+``` r
+
+# Full-text search
+results <- search_ontology("Qi stagnation")
+
+# Get entity with relations
+entity <- get_ontology_entity("TCM_0001")
+entity$ancestors
+entity$children
+entity$external_mappings
+
+# Navigate the hierarchy
+children <- get_ontology_children("TCM_0001")
+ancestors <- get_ontology_ancestors("TCM_0001")
+descendants <- get_ontology_descendants("TCM_0001", max_level = 2)
+```
+
+### Ontology tree and statistics
+
+``` r
+
+# Fetch tree at depth 2
+tree <- fetch_ontology_tree(depth = 2)
+
+# Statistics
+stats <- fetch_ontology_stats()
+stats$total_entities
+
+# Top-level categories
+categories <- list_ontology_categories()
+```
+
+### Cross-database mapping
+
+``` r
+
+# Find TCM entities mapped to a MeSH term
+mapped <- search_ontology_mapping("MeSH", "D008516")
+
+# Export ontology
+export_ontology("csv", file = "tcm_ontology.csv")
+export_ontology("json", depth = 3, file = "tcm_ontology.json")
+```
+
+## MIDAS Gene-Disease Analysis
+
+### Gene-to-disease and disease-to-gene
+
+``` r
+
+# Which diseases are associated with these genes?
+g2d <- query_gene_diseases(c("TP53", "BRCA1", "EGFR"))
+g2d
+attr(g2d, "gene_mapping")
+
+# Which genes are associated with breast cancer?
+d2g <- query_disease_genes("breast cancer")
+d2g
+attr(d2g, "matched_diseases")
+```
+
+### Disease enrichment analysis
+
+``` r
+
+gene_list <- c("TP53", "BRCA1", "EGFR", "VEGFA", "MYC", "KRAS")
+enrichment <- query_disease_enrichment(
+  gene_list,
+  p_value_cutoff = 0.05,
+  correction_method = "fdr"
+)
+enrichment
+attr(enrichment, "total_significant")
+```
+
+### Utility functions
+
+``` r
+
+# Convert mixed gene identifiers
+convert_gene_ids(c("TP53", "7157", "ENSG00000141510"))
+
+# Autocomplete disease names
+autocomplete_disease("breast")
+
+# Available data sources
+fetch_midas_sources()
+
+# Database statistics
+fetch_midas_stats()
+```

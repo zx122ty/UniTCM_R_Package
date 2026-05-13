@@ -1,0 +1,37 @@
+# Get subgraph for a set of nodes
+
+Get subgraph for a set of nodes
+
+## Usage
+
+``` r
+get_subgraph(node_ids, limit = 200L)
+```
+
+## Arguments
+
+- node_ids:
+
+  Character vector of node IDs (max 50).
+
+- limit:
+
+  Maximum edges (default 200).
+
+## Value
+
+A named list with `$nodes`
+([`tibble::tibble()`](https://rdrr.io/pkg/tibble/man/tibble.html)),
+`$edges`
+([`tibble::tibble()`](https://rdrr.io/pkg/tibble/man/tibble.html)), and
+`$has_more`.
+
+## Examples
+
+``` r
+# \donttest{
+get_subgraph(c("H:UNITCM_H001", "C:UNITCM_I00001"))
+#> Error in httr2::req_perform(req): HTTP 500 Internal Server Error.
+#> ℹ UniTCM server error. Please try again later.
+# }
+```
