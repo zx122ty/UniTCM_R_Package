@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "name": "TCM Entity Ontology",
+    "version": "1.0",
+    "exported_at": "2026-05-13T14:29:40.689860+00:00",
+    "total_entities": 632
+  },
+  "ontology": [
+    {
+      "tcm_id": "TCM:0000001",
+      "name": "Traditional Chinese Medicine",
+      "name_cn": "中国传统医药",
+      "level": 0,
+      "children": [
+        {
+          "tcm_id": "TCM:0100000",
+          "name": "Materia Medica",
+          "name_cn": "中药",
+          "level": 1,
+          "children": []
+        },
+        {
+          "tcm_id": "TCM:0200000",
+          "name": "Formulas and Preparations",
+          "name_cn": "方剂与制剂",
+          "level": 1,
+          "children": []
+        },
+        {
+          "tcm_id": "TCM:0300000",
+          "name": "Therapeutic Techniques",
+          "name_cn": "治疗技术",
+          "level": 1,
+          "children": []
+        },
+        {
+          "tcm_id": "TCM:0400000",
+          "name": "Theoretical Concepts",
+          "name_cn": "理论概念",
+          "level": 1,
+          "children": []
+        },
+        {
+          "tcm_id": "TCM:0500000",
+          "name": "Diagnostic Methods",
+          "name_cn": "诊断方法",
+          "level": 1,
+          "children": []
+        },
+        {
+          "tcm_id": "TCM:0600000",
+          "name": "Diseases and Patterns",
+          "name_cn": "病证",
+          "level": 1,
+          "children": []
+        },
+        {
+          "tcm_id": "TCM:0700000",
+          "name": "Anatomical Concepts",
+          "name_cn": "解剖概念",
+          "level": 1,
+          "children": []
+        },
+        {
+          "tcm_id": "TCM:0800000",
+          "name": "TCM Pharmacology",
+          "name_cn": "中药药理",
+          "level": 1,
+          "children": []
+        },
+        {
+          "tcm_id": "TCM:0900000",
+          "name": "Integration and Modernization",
+          "name_cn": "整合与现代化",
+          "level": 1,
+          "children": []
+        },
+        {
+          "tcm_id": "TCM:1000000",
+          "name": "Classical Texts and Heritage",
+          "name_cn": "经典文献与传承",
+          "level": 1,
+          "children": []
+        },
+        {
+          "tcm_id": "TCM:1100000",
+          "name": "Regulatory and Standards",
+          "name_cn": "法规与标准",
+          "level": 1,
+          "children": []
+        },
+        {
+          "tcm_id": "TCM:1200000",
+          "name": "Treatment Principles and Methods",
+          "name_cn": "治则治法",
+          "level": 1,
+          "children": []
+        },
+        {
+          "tcm_id": "TCM:1300000",
+          "name": "Health Preservation and Prevention",
+          "name_cn": "养生与预防",
+          "level": 1,
+          "children": []
+        },
+        {
+          "tcm_id": "TCM:1400000",
+          "name": "Ethnic Traditional Medicine",
+          "name_cn": "民族医药",
+          "level": 1,
+          "children": []
+        }
+      ]
+    }
+  ]
+}
