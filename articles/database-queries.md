@@ -32,6 +32,12 @@ facets$meridians
 
 ### Herb details and compounds
 
+UniTCM IDs are flexible: all `get_*` and `export_*` functions accept
+either the prefixed display form shown on the website
+(e.g. `"UNITCM_H001"`, `"UNITCM_I00001"`) or the bare numeric ID
+(e.g. `"1"`, `1L`). The package normalizes them internally before
+calling the API.
+
 ``` r
 
 herb <- get_herb("UNITCM_H001")

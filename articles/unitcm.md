@@ -25,12 +25,12 @@ library(unitcm)
 ```
 
 By default, `unitcm` connects to the public UniTCM API at
-`https://UniTCM.cn/api/v1`. You can override this if needed:
+`https://unitcm.qfxulab.com/api/v1`. You can override this if needed:
 
 ``` r
 
 # Only needed for custom/local deployments
-set_base_url("https://UniTCM.cn/api/v1")
+set_base_url("https://unitcm.qfxulab.com/api/v1")
 ```
 
 ## Authentication

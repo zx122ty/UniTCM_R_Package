@@ -53,17 +53,8 @@ A `ggplot` object.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 g <- build_hct_network("UNITCM_H001")
-#> Fetching compounds for "UNITCM_H001"...
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-#> Error in httr2::req_perform(req): HTTP 422 Unprocessable Entity.
-#> ℹ HTTP 422: list(type = "int_parsing", loc = list("path", "herb_id"), msg =
-#>   "Input should be a valid integer, unable to parse string as an integer")
 plot_network(g)
-#> Error: object 'g' not found
-# }
+} # }
 ```

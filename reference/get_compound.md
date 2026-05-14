@@ -21,12 +21,7 @@ A named list with 26+ fields including an `xref` sub-list.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 get_compound("UNITCM_I00001")
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-#> Error in httr2::req_perform(req): HTTP 422 Unprocessable Entity.
-#> ℹ HTTP 422: list(type = "int_parsing", loc = list("path", "id"), msg = "Input
-#>   should be a valid integer, unable to parse string as an integer")
-# }
+} # }
 ```

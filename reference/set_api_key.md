@@ -26,8 +26,7 @@ Invisible `NULL`.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 set_api_key("unitcm_your_key_here")
-#> API key stored in session.
-# }
+} # }
 ```

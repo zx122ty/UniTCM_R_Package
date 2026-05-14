@@ -242,3 +242,27 @@ Quick plotting helpers.
   : Plot enrichment results
 - [`plot_compound_radar()`](https://zx122ty.github.io/UniTCM_R_Package/reference/plot_compound_radar.md)
   : Plot compound physicochemical radar chart
+
+## Target2NP
+
+Reverse target-to-natural-product search across DrugCLIP and SEA.
+
+- [`search_target2np()`](https://zx122ty.github.io/UniTCM_R_Package/reference/search_target2np.md)
+  : Search Target2NP compound-target interactions
+- [`search_target2np_drugclip()`](https://zx122ty.github.io/UniTCM_R_Package/reference/search_target2np_drugclip.md)
+  : Search DrugCLIP predicted compound-target interactions
+- [`search_target2np_sea()`](https://zx122ty.github.io/UniTCM_R_Package/reference/search_target2np_sea.md)
+  : Search SEA (ChEMBL similarity) predicted compound-target
+  interactions
+- [`get_target2np()`](https://zx122ty.github.io/UniTCM_R_Package/reference/get_target2np.md)
+  : Get a single Target2NP interaction record
+- [`batch_target2np()`](https://zx122ty.github.io/UniTCM_R_Package/reference/batch_target2np.md)
+  : Batch query Target2NP by identifier list
+- [`aggregated_target2np()`](https://zx122ty.github.io/UniTCM_R_Package/reference/aggregated_target2np.md)
+  : Aggregated Target2NP view across data sources
+- [`target2np_multi_source_summary()`](https://zx122ty.github.io/UniTCM_R_Package/reference/target2np_multi_source_summary.md)
+  : Multi-source summary for a Target2NP query
+- [`fetch_target2np_filters()`](https://zx122ty.github.io/UniTCM_R_Package/reference/fetch_target2np_filters.md)
+  : Fetch Target2NP filter options
+- [`fetch_target2np_stats()`](https://zx122ty.github.io/UniTCM_R_Package/reference/fetch_target2np_stats.md)
+  : Fetch Target2NP database statistics

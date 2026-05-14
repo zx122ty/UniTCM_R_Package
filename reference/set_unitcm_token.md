@@ -26,8 +26,7 @@ Invisible `NULL`.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 set_unitcm_token("my-secret-token")
-#> Token stored in session.
-# }
+} # }
 ```

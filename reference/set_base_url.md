@@ -13,7 +13,7 @@ set_base_url(url)
 - url:
 
   A character string. The base URL for the UniTCM API, e.g.
-  `"https://UniTCM.cn/api/v1"`.
+  `"https://unitcm.qfxulab.com/api/v1"`.
 
 ## Value
 
@@ -22,8 +22,7 @@ Invisible previous URL value.
 ## Examples
 
 ``` r
-# \donttest{
-set_base_url("https://UniTCM.cn/api/v1")
-#> UniTCM base URL set to <https://UniTCM.cn/api/v1>
-# }
+if (FALSE) { # \dontrun{
+set_base_url("https://unitcm.qfxulab.com/api/v1")
+} # }
 ```

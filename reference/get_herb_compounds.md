@@ -35,12 +35,7 @@ of compounds with attribute `"total"`.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 get_herb_compounds("UNITCM_H001")
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-#> Error in httr2::req_perform(req): HTTP 422 Unprocessable Entity.
-#> ℹ HTTP 422: list(type = "int_parsing", loc = list("path", "herb_id"), msg =
-#>   "Input should be a valid integer, unable to parse string as an integer")
-# }
+} # }
 ```

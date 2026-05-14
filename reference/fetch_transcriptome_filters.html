@@ -50,66 +50,10 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
 <span class="r-in"><span><span class="va">filters</span> <span class="op">&lt;-</span> <span class="fu">fetch_transcriptome_filters</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
 <span class="r-in"><span><span class="va">filters</span><span class="op">$</span><span class="va">organism</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "Aconitum carmichaelii"                              </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [2] "Annulohypoxylon stygium"                            </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [3] "Arabidopsis thaliana"                               </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [4] "Artemisia annua"                                    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [5] "Caenorhabditis elegans"                             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [6] "Campylobacter jejuni subsp. jejuni NCTC 11168"      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [7] "Candida albicans"                                   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [8] "Canis lupus familiaris"                             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [9] "Cervus elaphus"                                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [10] "Cordyceps militaris"                                </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [11] "Cornus officinalis"                                 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [12] "Cryptococcus neoformans H99"                        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [13] "Danio rerio"                                        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [14] "Dendrobium catenatum"                               </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [15] "Dendrobium officinale"                              </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [16] "Echinococcus granulosus"                            </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [17] "Epinephelus fuscoguttatus x Epinephelus lanceolatus"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [18] "Equus caballus"                                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [19] "Escherichia coli"                                   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [20] "Forsythia koreana"                                  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [21] "Forsythia suspensa"                                 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [22] "Forsythia viridissima"                              </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [23] "Fusarium verticillioides"                           </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [24] "Ganoderma lucidum"                                  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [25] "Glycyrrhiza uralensis"                              </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [26] "Homo sapiens"                                       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [27] "Lithospermum officinale"                            </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [28] "Lycium barbarum/Lycium ruthenicum"                  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [29] "Magnolia obovata"                                   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [30] "Mus musculus"                                       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [31] "Mycobacterium tuberculosis"                         </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [32] "Mycolicibacterium smegmatis MC2 155"                </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [33] "Ophiocordyceps sinensis"                            </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [34] "Oryzias latipes"                                    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [35] "Panax ginseng"                                      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [36] "Panax japonicus"                                    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [37] "Panax notoginseng"                                  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [38] "Pinellia ternata"                                   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [39] "Plasmodium falciparum"                              </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [40] "Platycodon grandiflorus"                            </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [41] "Pseudomonas aeruginosa"                             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [42] "Rattus norvegicus"                                  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [43] "Saccharomyces cerevisiae"                           </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [44] "Salvia miltiorrhiza"                                </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [45] "Shigella flexneri"                                  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [46] "Staphylococcus aureus"                              </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [47] "Staphylococcus aureus subsp. aureus MW2"            </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [48] "Streptococcus mutans"                               </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [49] "Streptococcus suis 05ZYH33"                         </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [50] "Sus scrofa"                                         </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [51] "Tachysurus fulvidraco x Tachysurus vachelli"        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [52] "Tremella fuciformis"                                </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [53] "Trichophyton mentagrophytes"                        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [54] "Trichophyton rubrum"                                </span>
-<span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

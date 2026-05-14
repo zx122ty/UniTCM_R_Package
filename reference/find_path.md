@@ -32,11 +32,7 @@ and `$edges`
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 find_path("H:UNITCM_H001", "T:TP53")
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-#> Error in httr2::req_perform(req): HTTP 500 Internal Server Error.
-#> ℹ UniTCM server error. Please try again later.
-# }
+} # }
 ```

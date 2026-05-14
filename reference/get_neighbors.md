@@ -37,11 +37,7 @@ and `$has_more`.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 get_neighbors("H:UNITCM_H001", depth = 1)
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-#> Error in httr2::req_perform(req): HTTP 500 Internal Server Error.
-#> ℹ UniTCM server error. Please try again later.
-# }
+} # }
 ```

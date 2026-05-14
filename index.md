@@ -23,7 +23,7 @@ library(unitcm)
 search_herbs(q = "ginseng")
 
 # Get compound targets (DrugCLIP deep learning predictions)
-get_compound_targets("UNITCM_I00001")
+get_compound_targets("1")
 
 # Gene-disease enrichment
 query_disease_enrichment(c("TP53", "BRCA1", "EGFR", "VEGFA"))

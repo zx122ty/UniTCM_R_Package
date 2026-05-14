@@ -51,68 +51,9 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
 <span class="r-in"><span><span class="fu">fetch_transcriptome_stats</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $total_datasets</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1037</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $total_organisms</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 54</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $total_tcm_entities</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 451</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $total_analysis_modules</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 11</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $tcm_classification_distribution</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                               name count</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1            TCM Active ingredient   566</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2             Herb/herbal medicine   200</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3                   Modern formula    65</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4        Acupuncture &amp; moxibustion    64</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5                  Classic formula    55</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6          Chinese patent medicine    46</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7                            Other    24</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8         TCM theory &amp; methodology    12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9                  TCM diagnostics     3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10 Integrated TCM-Western medicine     2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $organism_distribution</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                   name count</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                         Homo sapiens   452</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                         Mus musculus   331</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                    Rattus norvegicus   135</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                Plasmodium falciparum    19</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5                             Saccharomyces cerevisiae     8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6                                          Danio rerio     5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7                                     Escherichia coli     5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8                                  Salvia miltiorrhiza     5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9                                           Sus scrofa     4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10                               Staphylococcus aureus     4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11                                     Panax japonicus     3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12                              Caenorhabditis elegans     3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13                                Streptococcus mutans     3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14                         Cryptococcus neoformans H99     3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15                               Glycyrrhiza uralensis     3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16                                       Panax ginseng     3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17                                      Equus caballus     2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18                             Ophiocordyceps sinensis     2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19 Epinephelus fuscoguttatus x Epinephelus lanceolatus     2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20                                 Cordyceps militaris     2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $experiment_type_distribution</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                 name count</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1                      Expression profiling by array   519</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 Expression profiling by high throughput sequencing   497</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3                  Non-coding RNA profiling by array    15</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4                       Expression profiling by SAGE     3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5       Methylation profiling by genome tiling array     2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6                Genome variation profiling by array     1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

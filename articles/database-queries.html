@@ -94,6 +94,12 @@ UniTCM platform.</p>
 <div class="section level3">
 <h3 id="herb-details-and-compounds">Herb details and compounds<a class="anchor" aria-label="anchor" href="#herb-details-and-compounds"></a>
 </h3>
+<p>UniTCM IDs are flexible: all <code>get_*</code> and
+<code>export_*</code> functions accept either the prefixed display form
+shown on the website (e.g. <code>"UNITCM_H001"</code>,
+<code>"UNITCM_I00001"</code>) or the bare numeric ID
+(e.g. <code>"1"</code>, <code>1L</code>). The package normalizes them
+internally before calling the API.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">herb</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_herb.html">get_herb</a></span><span class="op">(</span><span class="st">"UNITCM_H001"</span><span class="op">)</span></span>
 <span><span class="va">herb</span><span class="op">$</span><span class="va">herb_english_name</span></span>

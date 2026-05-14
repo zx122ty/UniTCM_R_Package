@@ -17,11 +17,8 @@ A recursive nested list with structure
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 tree <- fetch_disease_tree()
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
 names(tree[[1]])
-#> NULL
-# }
+} # }
 ```
