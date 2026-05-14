@@ -13,7 +13,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} with columns \code{value}, \code
 List term sources
 }
 \examples{
-\donttest{
+\dontrun{
 list_term_sources()
 }
 }

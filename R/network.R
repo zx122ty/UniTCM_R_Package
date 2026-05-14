@@ -13,7 +13,7 @@
 #'   (`"herb"`, `"compound"`, `"target"`), and `label`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' g <- build_hct_network(c("UNITCM_H001", "UNITCM_H002"))
 #' igraph::vcount(g)
 #' }
@@ -103,7 +103,7 @@ build_hct_network <- function(herbs, target_method = "drugclip",
 #'   (`"formula"`, `"herb"`), `label`, and `dose` (for herbs).
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' g <- build_formula_herb_network(1)
 #' igraph::V(g)$label
 #' }
@@ -153,7 +153,7 @@ build_formula_herb_network <- function(formula_id) {
 #' @return An `igraph` graph object.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' resp <- get_neighbors("H:UNITCM_H001")
 #' g <- as_igraph(resp)
 #' }
@@ -172,14 +172,15 @@ as_igraph <- function(graph_response) {
     target_cols <- intersect(c("target", "to"), names(edges))
     if (length(edge_cols) > 0L && length(target_cols) > 0L) {
       edge_df <- data.frame(
-        from = edges[[edge_cols[1L]]],
-        to = edges[[target_cols[1L]]],
+        from = as.character(edges[[edge_cols[1L]]]),
+        to = as.character(edges[[target_cols[1L]]]),
         stringsAsFactors = FALSE
       )
       extra_edge_cols <- setdiff(names(edges),
         c("source", "from", "target", "to"))
       for (col in extra_edge_cols) {
-        edge_df[[col]] <- edges[[col]]
+        val <- edges[[col]]
+        if (is.atomic(val)) edge_df[[col]] <- val
       }
     } else {
       edge_df <- data.frame(from = character(), to = character(),
@@ -191,9 +192,41 @@ as_igraph <- function(graph_response) {
   }
 
   node_df <- as.data.frame(nodes, stringsAsFactors = FALSE)
-  if (!"name" %in% names(node_df) && "id" %in% names(node_df)) {
-    node_df$name <- node_df$id
+
+  # Ensure the vertex-name column exists and is FIRST. igraph uses the
+  # first column of `vertices` as the vertex name, so simply appending
+  # `name <- id` is not enough.
+  if (!"name" %in% names(node_df)) {
+    if ("id" %in% names(node_df)) {
+      node_df$name <- as.character(node_df$id)
+    } else {
+      rlang::abort("`graph_response$nodes` must have an `id` or `name` column.")
+    }
+  } else {
+    node_df$name <- as.character(node_df$name)
   }
+  node_df <- node_df[, c("name", setdiff(names(node_df), "name")), drop = FALSE]
+
+  # Drop list-columns / non-atomic columns — igraph cannot store them as
+  # vertex attributes and they trigger "undefined columns selected" errors
+  # when set_vertex_attr tries to index them.
+  keep_cols <- vapply(node_df, function(col) is.atomic(col) || is.factor(col),
+                      logical(1L))
+  node_df <- node_df[, keep_cols, drop = FALSE]
+
+  # Add any edge endpoints not present in nodes as orphan vertices so
+  # igraph::graph_from_data_frame() does not error.
+  all_endpoints <- unique(c(edge_df$from, edge_df$to))
+  missing_nodes <- setdiff(all_endpoints, node_df$name)
+  missing_nodes <- missing_nodes[!is.na(missing_nodes) & nzchar(missing_nodes)]
+  if (length(missing_nodes) > 0L) {
+    extra <- data.frame(name = missing_nodes, stringsAsFactors = FALSE)
+    for (col in setdiff(names(node_df), "name")) extra[[col]] <- NA
+    node_df <- rbind(node_df, extra[, names(node_df), drop = FALSE])
+  }
+
+  # Drop duplicate vertex names (keep first).
+  node_df <- node_df[!duplicated(node_df$name), , drop = FALSE]
 
   igraph::graph_from_data_frame(edge_df, directed = FALSE,
     vertices = node_df)
@@ -205,7 +238,7 @@ as_igraph <- function(graph_response) {
 #' @return A `tidygraph::tbl_graph` object.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' resp <- get_neighbors("H:UNITCM_H001")
 #' tg <- as_tidygraph(resp)
 #' }

@@ -85,25 +85,7 @@ datasets with attribute `"total"`.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 search_transcriptomes(search = "ginseng")
-#> # A tibble: 11 × 11
-#>    id            submission_id  gse_id tcm_classification tcm_entity_name_chin…¹
-#>    <chr>         <chr>          <chr>  <chr>              <chr>                 
-#>  1 TCMtrans00041 tcmomics000231 GSE10… Herb/herbal medic… 三七                  
-#>  2 TCMtrans00102 tcmomics000278 GSE12… Herb/herbal medic… 人参                  
-#>  3 TCMtrans00103 tcmomics000278 GSE12… Herb/herbal medic… 人参                  
-#>  4 TCMtrans00104 tcmomics000278 GSE12… Herb/herbal medic… 人参                  
-#>  5 TCMtrans00129 tcmomics000152 GSE12… Herb/herbal medic… 高丽红参              
-#>  6 TCMtrans00130 tcmomics000152 GSE12… Herb/herbal medic… 高丽红参              
-#>  7 TCMtrans00191 tcmomics000340 GSE14… Herb/herbal medic… 人参花蕾              
-#>  8 TCMtrans00192 tcmomics000340 GSE14… Herb/herbal medic… 人参花蕾              
-#>  9 TCMtrans00196 tcmomics000349 GSE14… Herb/herbal medic… 高丽红参提取物        
-#> 10 TCMtrans00197 tcmomics000349 GSE14… Herb/herbal medic… 高丽红参提取物        
-#> 11 TCMtrans00719 tcmomics000920 GSE28… Herb/herbal medic… 熟三七                
-#> # ℹ abbreviated name: ¹​tcm_entity_name_chinese
-#> # ℹ 6 more variables: tcm_entity_name_english <chr>, organism <chr>,
-#> #   tissue_organ <chr>, disease_model <chr>, experiment_type <chr>,
-#> #   confidence <chr>
-# }
+} # }
 ```

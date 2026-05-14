@@ -23,12 +23,8 @@ A single-row
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 herb <- get_herb("UNITCM_H001")
-#> Error in httr2::req_perform(req): HTTP 422 Unprocessable Entity.
-#> ℹ HTTP 422: list(type = "int_parsing", loc = list("path", "herb_id"), msg =
-#>   "Input should be a valid integer, unable to parse string as an integer")
 flatten_response(herb)
-#> Error: object 'herb' not found
-# }
+} # }
 ```

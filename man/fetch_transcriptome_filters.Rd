@@ -13,7 +13,7 @@ A named list of character vectors for each filter field.
 Get transcriptome filter options
 }
 \examples{
-\donttest{
+\dontrun{
 filters <- fetch_transcriptome_filters()
 filters$organism
 }

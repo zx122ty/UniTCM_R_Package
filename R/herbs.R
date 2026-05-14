@@ -22,7 +22,7 @@
 #' @return A [tibble::tibble()] of herbs with attribute `"total"`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' search_herbs(q = "ginseng")
 #' search_herbs(flavors = c("sweet", "bitter"), page_size = 50)
 #' }
@@ -68,11 +68,11 @@ search_herbs <- function(q = NULL, therapeutic_en = NULL,
 #' @return A named list with 31 fields including cross-reference IDs.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_herb("UNITCM_H001")
 #' }
 get_herb <- function(herb_id) {
-  unitcm_request(paste0("/herbs/", herb_id))
+  unitcm_request(paste0("/herbs/", normalize_id(herb_id)))
 }
 
 #' Get herb filter facets
@@ -83,7 +83,7 @@ get_herb <- function(herb_id) {
 #'   (e.g. `therapeutic_en_class`, `family`, `toxicity`).
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' facets <- fetch_herb_facets()
 #' facets$toxicity
 #' }
@@ -111,12 +111,12 @@ fetch_herb_facets <- function() {
 #' @return A [tibble::tibble()] of compounds with attribute `"total"`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_herb_compounds("UNITCM_H001")
 #' }
 get_herb_compounds <- function(herb_id, page = 1L, page_size = 20L,
                                all_pages = FALSE) {
-  path <- paste0("/herbs/", herb_id, "/compounds")
+  path <- paste0("/herbs/", normalize_id(herb_id), "/compounds")
 
   if (isTRUE(all_pages)) {
     return(unitcm_paginate(path))
@@ -138,7 +138,7 @@ get_herb_compounds <- function(herb_id, page = 1L, page_size = 20L,
 #' @return Invisible file path.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' export_herbs(q = "ginseng", file = "ginseng_herbs.csv")
 #' }
 export_herbs <- function(q = NULL, therapeutic_en = NULL,
@@ -172,10 +172,13 @@ export_herbs <- function(q = NULL, therapeutic_en = NULL,
 #' @return Invisible file path.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' export_herb_compounds("UNITCM_H001")
 #' }
 export_herb_compounds <- function(herb_id,
                                   file = "herb_compounds_export.csv") {
-  unitcm_download(paste0("/herbs/", herb_id, "/compounds/export"), file = file)
+  unitcm_download(
+    paste0("/herbs/", normalize_id(herb_id), "/compounds/export"),
+    file = file
+  )
 }

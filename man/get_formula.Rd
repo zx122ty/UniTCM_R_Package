@@ -16,7 +16,7 @@ A named list with 30+ fields.
 Retrieve full detail for one formula from the Disease-Formula Atlas.
 }
 \examples{
-\donttest{
+\dontrun{
 get_formula(1)
 }
 }

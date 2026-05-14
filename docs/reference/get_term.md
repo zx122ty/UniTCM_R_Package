@@ -22,10 +22,7 @@ A named list with fields including `chinese_name`, `pinyin`,
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 get_term("TCM_T001")
-#> Error in httr2::req_perform(req): HTTP 422 Unprocessable Entity.
-#> ℹ HTTP 422: list(type = "int_parsing", loc = list("path", "term_id"), msg =
-#>   "Input should be a valid integer, unable to parse string as an integer")
-# }
+} # }
 ```

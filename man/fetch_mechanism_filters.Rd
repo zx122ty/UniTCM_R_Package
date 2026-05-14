@@ -16,7 +16,7 @@ Fetches all 6 filter option endpoints and returns them as a named list
 of tibbles.
 }
 \examples{
-\donttest{
+\dontrun{
 filters <- fetch_mechanism_filters()
 filters$categories
 }

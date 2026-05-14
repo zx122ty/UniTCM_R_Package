@@ -29,9 +29,7 @@ A named list with `$nodes`
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 get_subgraph(c("H:UNITCM_H001", "C:UNITCM_I00001"))
-#> Error in httr2::req_perform(req): HTTP 500 Internal Server Error.
-#> ℹ UniTCM server error. Please try again later.
-# }
+} # }
 ```

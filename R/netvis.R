@@ -4,7 +4,7 @@
 #'   `target`, `disease`) and `edges` sub-list.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' fetch_netvis_stats()
 #' }
 fetch_netvis_stats <- function() {
@@ -21,7 +21,7 @@ fetch_netvis_stats <- function() {
 #'   `label_cn`, `degree`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' search_netvis("ginseng", type = "herb")
 #' }
 search_netvis <- function(q, type = "all", limit = 20L) {
@@ -44,12 +44,12 @@ search_netvis <- function(q, type = "all", limit = 20L) {
 #'   ([tibble::tibble()]), and `$has_more`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_neighbors("H:UNITCM_H001", depth = 1)
 #' }
 get_neighbors <- function(node_id, depth = 1L, limit = 50L,
                           node_types = NULL) {
-  resp <- unitcm_request(paste0("/netvis/neighbors/", node_id),
+  resp <- unitcm_request(paste0("/netvis/neighbors/", normalize_node_id(node_id)),
     query = list(depth = depth, limit = limit, node_types = node_types))
   parse_graph_response(resp)
 }
@@ -62,12 +62,12 @@ get_neighbors <- function(node_id, depth = 1L, limit = 50L,
 #'   ([tibble::tibble()]), and `$has_more`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_subgraph(c("H:UNITCM_H001", "C:UNITCM_I00001"))
 #' }
 get_subgraph <- function(node_ids, limit = 200L) {
   resp <- unitcm_request("/netvis/subgraph",
-    query = list(nodes = paste(node_ids, collapse = ","), limit = limit))
+    query = list(nodes = paste(normalize_node_id(node_ids), collapse = ","), limit = limit))
   parse_graph_response(resp)
 }
 
@@ -80,12 +80,14 @@ get_subgraph <- function(node_ids, limit = 200L) {
 #'   ([tibble::tibble()]).
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' find_path("H:UNITCM_H001", "T:TP53")
 #' }
 find_path <- function(source, target, max_depth = 4L) {
   resp <- unitcm_request("/netvis/path",
-    query = list(source = source, target = target, max_depth = max_depth))
+    query = list(source = normalize_node_id(source),
+                 target = normalize_node_id(target),
+                 max_depth = max_depth))
   parse_graph_response(resp)
 }
 
@@ -96,11 +98,11 @@ find_path <- function(source, target, max_depth = 4L) {
 #'   `properties`, `detail_url`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_node_detail("H:UNITCM_H001")
 #' }
 get_node_detail <- function(node_id) {
-  unitcm_request(paste0("/netvis/node/", node_id))
+  unitcm_request(paste0("/netvis/node/", normalize_node_id(node_id)))
 }
 
 #' Get node metrics
@@ -109,11 +111,11 @@ get_node_detail <- function(node_id) {
 #' @return A named list with fields: `node_id`, `degree`, `neighbor_types`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_node_metrics("H:UNITCM_H001")
 #' }
 get_node_metrics <- function(node_id) {
-  unitcm_request(paste0("/netvis/metrics/", node_id))
+  unitcm_request(paste0("/netvis/metrics/", normalize_node_id(node_id)))
 }
 
 #' Detect communities in a graph
@@ -126,7 +128,7 @@ get_node_metrics <- function(node_id) {
 #' @return A [tibble::tibble()] with columns `node_id` and `community_id`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' detect_communities(
 #'   nodes = c("A", "B", "C"),
 #'   edges = data.frame(source = c("A", "B"), target = c("B", "C"))

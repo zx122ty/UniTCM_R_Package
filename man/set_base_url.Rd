@@ -8,7 +8,7 @@ set_base_url(url)
 }
 \arguments{
 \item{url}{A character string. The base URL for the UniTCM API,
-e.g. \code{"https://UniTCM.cn/api/v1"}.}
+e.g. \code{"https://unitcm.qfxulab.com/api/v1"}.}
 }
 \value{
 Invisible previous URL value.
@@ -17,7 +17,7 @@ Invisible previous URL value.
 Set the UniTCM API base URL
 }
 \examples{
-\donttest{
-set_base_url("https://UniTCM.cn/api/v1")
+\dontrun{
+set_base_url("https://unitcm.qfxulab.com/api/v1")
 }
 }

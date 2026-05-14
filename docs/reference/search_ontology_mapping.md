@@ -27,8 +27,7 @@ matched TCM entities.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 search_ontology_mapping("MeSH", "D008516")
-#> # A tibble: 0 × 0
-# }
+} # }
 ```

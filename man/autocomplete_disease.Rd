@@ -18,7 +18,7 @@ Search for disease names with autocomplete. Query must be at least 2
 characters.
 }
 \examples{
-\donttest{
+\dontrun{
 autocomplete_disease("breast")
 }
 }

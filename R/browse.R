@@ -22,7 +22,7 @@
 #' @return A [tibble::tibble()] of datasets with attribute `"total"`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' search_datasets(q = "ginseng", omics = "Transcriptomics")
 #' }
 search_datasets <- function(q = NULL, tcm = NULL, omics = NULL,
@@ -65,7 +65,7 @@ search_datasets <- function(q = NULL, tcm = NULL, omics = NULL,
 #'   `grants`, and `data_files`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_dataset("TMA2025001")
 #' }
 get_dataset <- function(submission_id) {
@@ -81,7 +81,7 @@ get_dataset <- function(submission_id) {
 #'   `project_title`, `TCM_classification`, `similarity_score`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_similar_datasets("TMA2025001")
 #' }
 get_similar_datasets <- function(submission_id) {
@@ -101,7 +101,7 @@ get_similar_datasets <- function(submission_id) {
 #' @return A named list of tibbles for each facet field.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' facets <- fetch_dataset_facets()
 #' facets$omics_type
 #' }
@@ -124,7 +124,7 @@ fetch_dataset_facets <- function() {
 #'   `omics_types_count`, `unique_organisms`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' fetch_dataset_stats()
 #' }
 fetch_dataset_stats <- function() {
@@ -140,7 +140,7 @@ fetch_dataset_stats <- function() {
 #' @return Invisible file path.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' export_datasets(omics = "Transcriptomics", file = "transcriptomics.csv")
 #' }
 export_datasets <- function(q = NULL, tcm = NULL, omics = NULL,

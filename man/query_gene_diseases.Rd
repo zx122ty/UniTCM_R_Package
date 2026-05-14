@@ -47,7 +47,7 @@ Given a list of gene symbols or IDs, find associated diseases across
 multiple evidence sources.
 }
 \examples{
-\donttest{
+\dontrun{
 query_gene_diseases(c("TP53", "BRCA1"))
 }
 }

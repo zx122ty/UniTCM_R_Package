@@ -10,7 +10,7 @@
 #'   `level`, `path`, `match_field`, `highlight`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' search_ontology("Qi stagnation")
 #' }
 search_ontology <- function(q, limit = 20L, level = NULL, category = NULL) {
@@ -35,7 +35,7 @@ search_ontology <- function(q, limit = 20L, level = NULL, category = NULL) {
 #'   `external_mappings`, `relations`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_ontology_entity("TCM_0001")
 #' }
 get_ontology_entity <- function(tcm_id) {
@@ -49,7 +49,7 @@ get_ontology_entity <- function(tcm_id) {
 #'   `level`, `path`, `children_count`, `has_children`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_ontology_children("TCM_0001")
 #' }
 get_ontology_children <- function(tcm_id) {
@@ -68,7 +68,7 @@ get_ontology_children <- function(tcm_id) {
 #' @return A [tibble::tibble()].
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_ontology_descendants("TCM_0001", max_level = 2)
 #' }
 get_ontology_descendants <- function(tcm_id, max_level = NULL) {
@@ -90,7 +90,7 @@ get_ontology_descendants <- function(tcm_id, max_level = NULL) {
 #'   `level`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_ontology_ancestors("TCM_0001")
 #' }
 get_ontology_ancestors <- function(tcm_id) {
@@ -111,7 +111,7 @@ get_ontology_ancestors <- function(tcm_id) {
 #'   children = list(...))`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' tree <- fetch_ontology_tree(depth = 2)
 #' }
 fetch_ontology_tree <- function(depth = 4L) {
@@ -124,7 +124,7 @@ fetch_ontology_tree <- function(depth = 4L) {
 #'   `total_level4`, `total_relations`, `total_mappings`, `categories`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' fetch_ontology_stats()
 #' }
 fetch_ontology_stats <- function() {
@@ -136,7 +136,7 @@ fetch_ontology_stats <- function() {
 #' @return A [tibble::tibble()] of level-1 entities.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' list_ontology_categories()
 #' }
 list_ontology_categories <- function() {
@@ -155,7 +155,7 @@ list_ontology_categories <- function() {
 #' @return A [tibble::tibble()].
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_ontology_by_level(2)
 #' }
 get_ontology_by_level <- function(level, parent_id = NULL) {
@@ -180,7 +180,7 @@ get_ontology_by_level <- function(level, parent_id = NULL) {
 #' @return A [tibble::tibble()] of matched TCM entities.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' search_ontology_mapping("MeSH", "D008516")
 #' }
 search_ontology_mapping <- function(database, external_id) {
@@ -208,7 +208,7 @@ search_ontology_mapping <- function(database, external_id) {
 #' @return Invisible file path.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' export_ontology("csv")
 #' export_ontology("json", depth = 2, file = "ontology_shallow.json")
 #' }

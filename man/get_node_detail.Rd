@@ -17,7 +17,7 @@ A named list with fields: \code{id}, \code{type}, \code{label}, \code{label_cn},
 Get node detail
 }
 \examples{
-\donttest{
+\dontrun{
 get_node_detail("H:UNITCM_H001")
 }
 }

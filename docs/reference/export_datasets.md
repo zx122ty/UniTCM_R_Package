@@ -79,7 +79,7 @@ Invisible file path.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 export_datasets(omics = "Transcriptomics", file = "transcriptomics.csv")
-# }
+} # }
 ```

@@ -29,8 +29,8 @@ Invisible file path.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 export_ontology("csv")
 export_ontology("json", depth = 2, file = "ontology_shallow.json")
-# }
+} # }
 ```

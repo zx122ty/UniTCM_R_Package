@@ -73,7 +73,7 @@ Invisible file path.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 export_herbs(q = "ginseng", file = "ginseng_herbs.csv")
-# }
+} # }
 ```

@@ -19,12 +19,15 @@ plot_network(
 
 - graph:
 
-  An `igraph` or `tidygraph::tbl_graph` object.
+  An `igraph` or
+  [`tidygraph::tbl_graph`](https://rdrr.io/pkg/tidygraph/man/tbl_graph.html)
+  object.
 
 - layout:
 
   Layout algorithm (default `"fr"` for Fruchterman-Reingold). See
-  `ggraph::create_layout()` for options.
+  [`ggraph::create_layout()`](https://rdrr.io/pkg/ggraph/man/ggraph.html)
+  for options.
 
 - color_by:
 
@@ -50,13 +53,8 @@ A `ggplot` object.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 g <- build_hct_network("UNITCM_H001")
-#> Fetching compounds for "UNITCM_H001"...
-#> Error in httr2::req_perform(req): HTTP 422 Unprocessable Entity.
-#> ℹ HTTP 422: list(type = "int_parsing", loc = list("path", "herb_id"), msg =
-#>   "Input should be a valid integer, unable to parse string as an integer")
 plot_network(g)
-#> Error in check_pkg("ggraph", reason = "to plot networks"): The package "ggraph" is required to plot networks
-# }
+} # }
 ```

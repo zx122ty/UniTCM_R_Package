@@ -22,9 +22,7 @@ columns: `tcm_id`, `name`, `name_cn`, `level`.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 get_ontology_ancestors("TCM_0001")
-#> Error in httr2::req_perform(req): HTTP 404 Not Found.
-#> ℹ Resource not found: Not Found
-# }
+} # }
 ```

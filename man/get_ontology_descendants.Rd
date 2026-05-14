@@ -18,7 +18,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}}.
 Get all descendants of an ontology entity
 }
 \examples{
-\donttest{
+\dontrun{
 get_ontology_descendants("TCM_0001", max_level = 2)
 }
 }

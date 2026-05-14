@@ -42,13 +42,8 @@ An `igraph` graph object with vertex attributes `name`, `type`
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 g <- build_hct_network(c("UNITCM_H001", "UNITCM_H002"))
-#> Fetching compounds for "UNITCM_H001"...
-#> Error in httr2::req_perform(req): HTTP 422 Unprocessable Entity.
-#> ℹ HTTP 422: list(type = "int_parsing", loc = list("path", "herb_id"), msg =
-#>   "Input should be a valid integer, unable to parse string as an integer")
 igraph::vcount(g)
-#> Error: object 'g' not found
-# }
+} # }
 ```

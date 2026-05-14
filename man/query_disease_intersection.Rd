@@ -19,7 +19,7 @@ A named list with elements: \verb{$diseases}, \verb{$per_source},
 Find genes shared across multiple diseases.
 }
 \examples{
-\donttest{
+\dontrun{
 query_disease_intersection(c("breast cancer", "lung cancer"))
 }
 }

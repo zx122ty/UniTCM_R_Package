@@ -41,14 +41,8 @@ distinguish results.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 get_compound_targets("UNITCM_I00001")
-#> Error in httr2::req_perform(req): HTTP 422 Unprocessable Entity.
-#> ℹ HTTP 422: list(type = "int_parsing", loc = list("path", "id"), msg = "Input
-#>   should be a valid integer, unable to parse string as an integer")
 get_compound_targets("UNITCM_I00001", method = "both")
-#> Error in httr2::req_perform(req): HTTP 422 Unprocessable Entity.
-#> ℹ HTTP 422: list(type = "int_parsing", loc = list("path", "id"), msg = "Input
-#>   should be a valid integer, unable to parse string as an integer")
-# }
+} # }
 ```

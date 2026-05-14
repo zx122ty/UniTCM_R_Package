@@ -21,7 +21,7 @@ Invisible file path.
 Download the full ontology in JSON, OWL/RDF, or CSV format.
 }
 \examples{
-\donttest{
+\dontrun{
 export_ontology("csv")
 export_ontology("json", depth = 2, file = "ontology_shallow.json")
 }

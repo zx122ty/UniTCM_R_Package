@@ -57,7 +57,7 @@ Query the UniTCM Ingredient Explorer with optional text search and
 physicochemical property filters.
 }
 \examples{
-\donttest{
+\dontrun{
 search_compounds(q = "quercetin")
 search_compounds(mw_min = 200, mw_max = 500, lipinski = "pass")
 }

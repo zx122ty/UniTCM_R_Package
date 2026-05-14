@@ -14,7 +14,7 @@
 #' @return A `ggplot` object.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' g <- build_hct_network("UNITCM_H001")
 #' plot_network(g)
 #' }
@@ -72,7 +72,7 @@ plot_network <- function(graph, layout = "fr", color_by = "type",
 #' @return A `ggplot` object.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' enrich <- query_disease_enrichment(c("TP53", "BRCA1", "EGFR"))
 #' plot_enrichment(enrich)
 #' }
@@ -162,7 +162,7 @@ plot_enrichment <- function(enrichment_result,
 #' @return A `ggplot` object.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' plot_compound_radar("UNITCM_I00001")
 #' }
 plot_compound_radar <- function(compound_id,

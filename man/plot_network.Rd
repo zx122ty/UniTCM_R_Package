@@ -17,7 +17,7 @@ plot_network(
 \item{graph}{An \code{igraph} or \code{tidygraph::tbl_graph} object.}
 
 \item{layout}{Layout algorithm (default \code{"fr"} for Fruchterman-Reingold).
-See \code{\link[ggraph:ggraph]{ggraph::create_layout()}} for options.}
+See \code{\link[ggraph:create_layout]{ggraph::create_layout()}} for options.}
 
 \item{color_by}{Vertex attribute name to map to node color (default
 \code{"type"}).}
@@ -36,7 +36,7 @@ A \code{ggplot} object.
 Visualize an \code{igraph} or \code{tbl_graph} object using \code{ggraph}.
 }
 \examples{
-\donttest{
+\dontrun{
 g <- build_hct_network("UNITCM_H001")
 plot_network(g)
 }

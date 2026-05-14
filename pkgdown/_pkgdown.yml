@@ -150,6 +150,19 @@ reference:
   - plot_enrichment
   - plot_compound_radar
 
+- title: Target2NP
+  desc: Reverse target-to-natural-product search across DrugCLIP and SEA.
+  contents:
+  - search_target2np
+  - search_target2np_drugclip
+  - search_target2np_sea
+  - get_target2np
+  - batch_target2np
+  - aggregated_target2np
+  - target2np_multi_source_summary
+  - fetch_target2np_filters
+  - fetch_target2np_stats
+
 articles:
 - title: Getting started
   contents:
@@ -159,3 +172,4 @@ articles:
   - database-queries
   - network-pharmacology
   - gene-disease-analysis
+  - target2np

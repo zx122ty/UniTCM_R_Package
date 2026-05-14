@@ -17,8 +17,7 @@ A character string, or `NULL` if no token is found.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 get_unitcm_token()
-#> NULL
-# }
+} # }
 ```

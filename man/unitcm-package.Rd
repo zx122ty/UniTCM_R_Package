@@ -6,18 +6,26 @@
 \alias{unitcm-package}
 \title{unitcm: R Client for the UniTCM Traditional Chinese Medicine Platform}
 \description{
-Provides functions to query the UniTCM API \url{https://UniTCM.cn/api/v1/}, covering herb exploration, compound/ADMET data, disease-formula associations, TCM ontology, transcriptomics, and gene-disease analysis (MIDAS).
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
+Provides functions to query the UniTCM API \url{https://unitcm.qfxulab.com/api/v1}, covering herb exploration, compound/ADMET data, disease-formula associations, TCM ontology, transcriptomics, and gene-disease analysis (MIDAS).
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/zx122ty/unitcm}
-  \item Report bugs at \url{https://github.com/zx122ty/unitcm/issues}
+  \item \url{https://zx122ty.github.io/UniTCM_R_Package/}
+  \item \url{https://github.com/zx122ty/UniTCM_R_Package}
+  \item Report bugs at \url{https://github.com/zx122ty/UniTCM_R_Package/issues}
 }
 
 }
 \author{
-\strong{Maintainer}: Xin Zhang \email{designer-why-ninja@duck.com} (\href{https://orcid.org/0000-0000-0000-0000}{ORCID})
+\strong{Maintainer}: Xiao Zheng \email{12519088@zju.edu.cn} (\href{https://orcid.org/0009-0000-3918-5725}{ORCID})
+
+Authors:
+\itemize{
+  \item Xiao Zheng \email{12519088@zju.edu.cn} (\href{https://orcid.org/0009-0000-3918-5725}{ORCID})
+}
 
 }
 \keyword{internal}

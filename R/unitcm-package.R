@@ -6,7 +6,17 @@
 #' @importFrom dplyr bind_rows
 #' @importFrom cli cli_inform cli_progress_bar cli_progress_update cli_progress_done
 #' @importFrom glue glue
-#' @importFrom httr2 request req_url_path_append req_user_agent req_retry
-#'   req_throttle req_error req_auth_bearer_token req_url_query req_method
-#'   req_body_json req_perform resp_body_json resp_status
+#' @importFrom httr2 request
+#' @importFrom httr2 req_url_path_append
+#' @importFrom httr2 req_user_agent
+#' @importFrom httr2 req_retry
+#' @importFrom httr2 req_throttle
+#' @importFrom httr2 req_error
+#' @importFrom httr2 req_auth_bearer_token
+#' @importFrom httr2 req_url_query
+#' @importFrom httr2 req_method
+#' @importFrom httr2 req_body_json
+#' @importFrom httr2 req_perform
+#' @importFrom httr2 resp_body_json
+#' @importFrom httr2 resp_status
 NULL

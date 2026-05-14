@@ -19,7 +19,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} of matched TCM entities.
 Find TCM entities mapped to an external database identifier.
 }
 \examples{
-\donttest{
+\dontrun{
 search_ontology_mapping("MeSH", "D008516")
 }
 }

@@ -19,7 +19,7 @@
 #'   `"gene_mapping"` containing the gene ID resolution mapping.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' query_gene_diseases(c("TP53", "BRCA1"))
 #' }
 query_gene_diseases <- function(gene_list, gene_id_type = "symbol",
@@ -65,7 +65,7 @@ query_gene_diseases <- function(gene_list, gene_id_type = "symbol",
 #'   `"matched_diseases"`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' query_disease_genes("breast cancer")
 #' }
 query_disease_genes <- function(disease_query, disease_id_type = "name",
@@ -101,7 +101,7 @@ query_disease_genes <- function(disease_query, disease_id_type = "name",
 #' @return A [tibble::tibble()] with columns including match status.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' convert_gene_ids(c("TP53", "7157", "ENSG00000141510"))
 #' }
 convert_gene_ids <- function(identifiers) {
@@ -136,7 +136,7 @@ convert_gene_ids <- function(identifiers) {
 #'   `"total_significant"`, `"total_tested"`, and `"input_gene_count"`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' query_disease_enrichment(c("TP53", "BRCA1", "EGFR", "VEGFA"))
 #' }
 query_disease_enrichment <- function(gene_list, gene_id_type = "symbol",
@@ -183,7 +183,7 @@ query_disease_enrichment <- function(gene_list, gene_id_type = "symbol",
 #'   `$genes_used`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' query_source_comparison(c("TP53", "BRCA1"), mode = "union")
 #' }
 query_source_comparison <- function(gene_list, sources = NULL,
@@ -209,7 +209,7 @@ query_source_comparison <- function(gene_list, sources = NULL,
 #'   `$targets`, `$total_intersection_genes`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' query_disease_intersection(c("breast cancer", "lung cancer"))
 #' }
 query_disease_intersection <- function(disease_queries, sources = NULL) {
@@ -230,7 +230,7 @@ query_disease_intersection <- function(disease_queries, sources = NULL) {
 #'   `gene_count`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' autocomplete_disease("breast")
 #' }
 autocomplete_disease <- function(q) {
@@ -254,7 +254,7 @@ autocomplete_disease <- function(q) {
 #'   `weight`, `row_count`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' fetch_midas_sources()
 #' }
 fetch_midas_sources <- function() {
@@ -272,7 +272,7 @@ fetch_midas_sources <- function() {
 #'   `total_diseases`, `sources`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' fetch_midas_stats()
 #' }
 fetch_midas_stats <- function() {

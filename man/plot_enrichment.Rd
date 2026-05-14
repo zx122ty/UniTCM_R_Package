@@ -35,7 +35,7 @@ Create a dot plot or bar plot from enrichment analysis results
 (e.g. from \code{\link[=query_disease_enrichment]{query_disease_enrichment()}}).
 }
 \examples{
-\donttest{
+\dontrun{
 enrich <- query_disease_enrichment(c("TP53", "BRCA1", "EGFR"))
 plot_enrichment(enrich)
 }

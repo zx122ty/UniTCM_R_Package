@@ -11,7 +11,7 @@
 #' @return Invisible previous URL value.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' set_base_url("https://unitcm.qfxulab.com/api/v1")
 #' }
 set_base_url <- function(url) {
@@ -30,7 +30,7 @@ set_base_url <- function(url) {
 #' @return A character string.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_base_url()
 #' }
 get_base_url <- function() {
@@ -56,7 +56,7 @@ get_base_url <- function() {
 #' @return Invisible `NULL`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' set_unitcm_token("my-secret-token")
 #' }
 set_unitcm_token <- function(token, keyring = FALSE) {
@@ -79,7 +79,7 @@ set_unitcm_token <- function(token, keyring = FALSE) {
 #' @return A character string, or `NULL` if no token is found.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_unitcm_token()
 #' }
 get_unitcm_token <- function() {
@@ -109,7 +109,7 @@ get_unitcm_token <- function() {
 #' @return Invisible `NULL`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' clear_unitcm_token()
 #' }
 clear_unitcm_token <- function(keyring = FALSE) {
@@ -137,7 +137,7 @@ clear_unitcm_token <- function(keyring = FALSE) {
 #' @return Invisible `NULL`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' set_api_key("unitcm_your_key_here")
 #' }
 set_api_key <- function(api_key, keyring = FALSE) {
@@ -160,7 +160,7 @@ set_api_key <- function(api_key, keyring = FALSE) {
 #' @return A character string, or `NULL` if no API key is found.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_api_key()
 #' }
 get_api_key <- function() {
@@ -190,7 +190,7 @@ get_api_key <- function() {
 #' @return Invisible `NULL`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' clear_api_key()
 #' }
 clear_api_key <- function(keyring = FALSE) {

@@ -22,7 +22,7 @@ A recursive nested list:
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 tree <- fetch_ontology_tree(depth = 2)
-# }
+} # }
 ```

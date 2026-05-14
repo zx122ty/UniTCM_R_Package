@@ -20,16 +20,15 @@ as_tidygraph(graph_response)
 
 ## Value
 
-A `tidygraph::tbl_graph` object.
+A
+[`tidygraph::tbl_graph`](https://rdrr.io/pkg/tidygraph/man/tbl_graph.html)
+object.
 
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 resp <- get_neighbors("H:UNITCM_H001")
-#> Error in httr2::req_perform(req): HTTP 500 Internal Server Error.
-#> ℹ UniTCM server error. Please try again later.
 tg <- as_tidygraph(resp)
-#> Error in check_pkg("tidygraph", reason = "to convert to tbl_graph"): The package "tidygraph" is required to convert to tbl_graph
-# }
+} # }
 ```

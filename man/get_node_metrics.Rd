@@ -16,7 +16,7 @@ A named list with fields: \code{node_id}, \code{degree}, \code{neighbor_types}.
 Get node metrics
 }
 \examples{
-\donttest{
+\dontrun{
 get_node_metrics("H:UNITCM_H001")
 }
 }

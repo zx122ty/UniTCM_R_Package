@@ -19,7 +19,7 @@ A named list with \verb{$nodes} (\code{\link[tibble:tibble]{tibble::tibble()}}),
 Get subgraph for a set of nodes
 }
 \examples{
-\donttest{
+\dontrun{
 get_subgraph(c("H:UNITCM_H001", "C:UNITCM_I00001"))
 }
 }

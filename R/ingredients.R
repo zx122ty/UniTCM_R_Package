@@ -18,7 +18,7 @@
 #' @return A [tibble::tibble()] of compounds with attribute `"total"`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' search_compounds(q = "quercetin")
 #' search_compounds(mw_min = 200, mw_max = 500, lipinski = "pass")
 #' }
@@ -64,12 +64,12 @@ search_compounds <- function(q = NULL, mw_min = NULL, mw_max = NULL,
 #' @return A named list with 26+ fields including an `xref` sub-list.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_compound("UNITCM_I00001")
 #' }
 get_compound <- function(id) {
 
-  unitcm_request(paste0("/ingredient-explorer/", id))
+  unitcm_request(paste0("/ingredient-explorer/", normalize_id(id)))
 }
 
 #' Get ADMET predictions for a compound
@@ -80,11 +80,11 @@ get_compound <- function(id) {
 #' @return A single-row [tibble::tibble()] with ~90 ADMET columns.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_compound_admet("UNITCM_I00001")
 #' }
 get_compound_admet <- function(id) {
-  resp <- unitcm_request(paste0("/ingredient-explorer/", id, "/admet"))
+  resp <- unitcm_request(paste0("/ingredient-explorer/", normalize_id(id), "/admet"))
   flatten_response(resp)
 }
 
@@ -102,14 +102,14 @@ get_compound_admet <- function(id) {
 #'   `source` column is added to distinguish results.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_compound_targets("UNITCM_I00001")
 #' get_compound_targets("UNITCM_I00001", method = "both")
 #' }
 get_compound_targets <- function(id, method = c("drugclip", "chembl", "both"),
                                  page = 1L, page_size = 20L) {
   method <- rlang::arg_match(method)
-  base_path <- paste0("/ingredient-explorer/", id)
+  base_path <- paste0("/ingredient-explorer/", normalize_id(id))
 
   if (method == "drugclip") {
     resp <- unitcm_request(paste0(base_path, "/targets"))
@@ -151,12 +151,12 @@ get_compound_targets <- function(id, method = c("drugclip", "chembl", "both"),
 #' @return A [tibble::tibble()] of herbs with attribute `"total"`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_compound_herbs("UNITCM_I00001")
 #' }
 get_compound_herbs <- function(id, page = 1L, page_size = 20L,
                                all_pages = FALSE) {
-  path <- paste0("/ingredient-explorer/", id, "/herbs")
+  path <- paste0("/ingredient-explorer/", normalize_id(id), "/herbs")
 
   if (isTRUE(all_pages)) {
     return(unitcm_paginate(path))
@@ -179,7 +179,7 @@ get_compound_herbs <- function(id, page = 1L, page_size = 20L,
 #'   `tpsa_range`, `qed_range`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' fetch_compound_facets()
 #' }
 fetch_compound_facets <- function() {
@@ -196,7 +196,7 @@ fetch_compound_facets <- function() {
 #' @return Invisible file path.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' export_compounds(mw_min = 200, file = "filtered_compounds.csv")
 #' }
 export_compounds <- function(q = NULL, mw_min = NULL, mw_max = NULL,
@@ -231,7 +231,7 @@ export_compounds <- function(q = NULL, mw_min = NULL, mw_max = NULL,
 #' @return Invisible file path.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' export_compound_module("UNITCM_I00001", "admet")
 #' }
 export_compound_module <- function(id,
@@ -241,7 +241,7 @@ export_compound_module <- function(id,
   module <- rlang::arg_match(module)
   file <- file %||% paste0(id, "_", module, ".csv")
   unitcm_download(
-    paste0("/ingredient-explorer/", id, "/export/", module),
+    paste0("/ingredient-explorer/", normalize_id(id), "/export/", module),
     file = file
   )
 }

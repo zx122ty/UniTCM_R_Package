@@ -23,9 +23,7 @@ columns: `submission_id`, `project_title`, `TCM_classification`,
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 get_similar_datasets("TMA2025001")
-#> Error in httr2::req_perform(req): HTTP 404 Not Found.
-#> ℹ Resource not found: Not Found
-# }
+} # }
 ```

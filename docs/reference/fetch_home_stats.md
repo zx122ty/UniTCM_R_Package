@@ -16,19 +16,7 @@ A named list with fields: `total_datasets`, `total_downloads`,
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 fetch_home_stats()
-#> $total_datasets
-#> [1] 1821
-#> 
-#> $total_downloads
-#> [1] 104937
-#> 
-#> $total_file_size
-#> [1] "0 B"
-#> 
-#> $recent_submissions_count
-#> [1] 0
-#> 
-# }
+} # }
 ```

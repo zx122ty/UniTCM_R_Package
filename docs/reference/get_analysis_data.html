@@ -73,51 +73,10 @@ ppi, pca, qc).</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
 <span class="r-in"><span><span class="fu">get_analysis_data</span><span class="op">(</span><span class="st">"TCMtrans00001"</span>, <span class="st">"deg"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 21,186 × 11</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    dataset_id    gene_symbol   log2fc   pvalue    padj avg_expression regulation</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> TCMtrans00001 A1BG-AS1     0.095<span style="text-decoration: underline;">2</span>   5.17<span style="color: #949494;">e</span><span style="color: #BB0000;">-1</span> 0.856             6.10 ns        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> TCMtrans00001 A1CF        -<span style="color: #BB0000;">0.269</span>    9.95<span style="color: #949494;">e</span><span style="color: #BB0000;">-2</span> 0.477             8.16 ns        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> TCMtrans00001 A2M          1.09     3.07<span style="color: #949494;">e</span><span style="color: #BB0000;">-6</span> 0.001<span style="text-decoration: underline;">38</span>           7.15 up        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> TCMtrans00001 A2ML1        0.027<span style="text-decoration: underline;">2</span>   8.41<span style="color: #949494;">e</span><span style="color: #BB0000;">-1</span> 0.968             5.82 ns        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> TCMtrans00001 A4GALT       0.050<span style="text-decoration: underline;">9</span>   6.70<span style="color: #949494;">e</span><span style="color: #BB0000;">-1</span> 0.916             6.09 ns        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> TCMtrans00001 A4GNT       -<span style="color: #BB0000;">0.146</span>    4.85<span style="color: #949494;">e</span><span style="color: #BB0000;">-1</span> 0.843             6.59 ns        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> TCMtrans00001 AAAS        -<span style="color: #BB0000;">0.034</span><span style="color: #BB0000; text-decoration: underline;">0</span>   8.08<span style="color: #949494;">e</span><span style="color: #BB0000;">-1</span> 0.960             8.63 ns        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> TCMtrans00001 AACS         0.162    2.19<span style="color: #949494;">e</span><span style="color: #BB0000;">-1</span> 0.650             9.09 ns        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> TCMtrans00001 AACSP1       0.116    3.54<span style="color: #949494;">e</span><span style="color: #BB0000;">-1</span> 0.767             6.65 ns        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> TCMtrans00001 AADAC        0.002<span style="text-decoration: underline;">52</span>  9.83<span style="color: #949494;">e</span><span style="color: #BB0000;">-1</span> 0.996             6.13 ns        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 21,176 more rows</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 4 more variables: deg_method &lt;chr&gt;, threshold_method &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   lfc_cutoff_used &lt;int&gt;, padj_cutoff_used &lt;dbl&gt;</span></span>
 <span class="r-in"><span><span class="fu">get_analysis_data</span><span class="op">(</span><span class="st">"TCMtrans00001"</span>, <span class="st">"expression"</span>, gene <span class="op">=</span> <span class="st">"TP53"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $data</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    Gene_Symbol GSM2674900 GSM2674901 GSM2674902 GSM2674903</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1         TP53   6.887469   6.671971   6.790053   6.878225</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2     TP53AIP1   6.216912   6.161573   6.284461   6.303154</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3      TP53BP1   9.382983   9.018228   9.315843   9.405297</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4      TP53BP2   8.663844   8.750332   8.297279   8.490237</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5      TP53I11   6.927735   6.814678   7.004845   6.726881</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6      TP53I13  11.498844  11.420389  11.472003  11.506273</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7       TP53I3   6.889434   6.936535   6.923999   7.285657</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8     TP53INP1   8.030120   8.523623   8.898801   8.652514</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9     TP53INP2   8.350801   8.286349   8.776619   8.920531</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10      TP53RK   8.368675   8.383222   8.656528   8.643688</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11     TP53TG1   8.901293   9.194195   8.825908   8.924855</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12     TP53TG3   7.223258   7.357909   7.742752   7.743061</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13    TP53TG3C   6.516537   6.314740   6.436735   6.576379</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14    TP53TG3D   7.399409   7.258216   7.789119   7.713908</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15   TP53TG3HP   6.177941   5.923671   6.185055   6.187122</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16     TP53TG5   6.309678   6.278441   6.232825   6.264123</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $total_rows</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $returned_rows</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

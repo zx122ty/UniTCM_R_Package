@@ -1,0 +1,232 @@
+---
+title: "Target2NP: Compound–Target Interactions"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Target2NP: Compound–Target Interactions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE
+)
+```
+
+```{r setup}
+library(unitcm)
+```
+
+The **Target2NP** module provides access to a large-scale compound–target
+interaction database covering multiple experimental sources (BindingDB,
+HERB2, NPASS, BATMAN, etc.) as well as computational predictions from
+DrugCLIP (deep learning) and SEA (ChEMBL similarity). This vignette
+walks through the main workflows.
+
+## Experimental interactions
+
+### Search and filter
+
+```{r search-basic}
+# Free-text search across all fields
+hits <- search_target2np(search = "quercetin")
+hits
+
+# Exact-match by gene symbol
+tp53 <- search_target2np(
+  search = "TP53",
+  search_field = "gene_symbol",
+  search_mode = "exact"
+)
+tp53
+attr(tp53, "total")
+```
+
+```{r search-filters}
+# Combine filters
+results <- search_target2np(
+  search = "curcumin",
+  search_field = "compound_name",
+  source_db = "BindingDB",
+  target_organism = "Homo sapiens",
+  activity_type = "IC50"
+)
+results
+```
+
+### Available filters and statistics
+
+```{r filter-options}
+# What filter values exist?
+opts <- fetch_target2np_filters()
+opts$source_db
+opts$target_organism
+opts$activity_type
+
+# Global database statistics
+stats <- fetch_target2np_stats()
+stats$total_records
+stats$source_db_distribution
+```
+
+### Retrieve a single record
+
+```{r detail}
+detail <- get_target2np(1)
+detail$compound_name
+detail$gene_symbol
+detail$activity_value
+detail$activity_units
+detail$pmid
+```
+
+### Batch query
+
+Look up interactions for multiple genes in one call (up to 50
+identifiers):
+
+```{r batch}
+batch <- batch_target2np(c("TP53", "BRCA1", "EGFR", "VEGFA"))
+batch
+attr(batch, "queries_matched")
+attr(batch, "queries_not_found")
+
+# UniProt-based batch
+batch_up <- batch_target2np(
+  c("P04637", "P38398"),
+  id_type = "uniprot_id"
+)
+```
+
+## Computational predictions
+
+### DrugCLIP deep-learning predictions
+
+```{r drugclip}
+# High-confidence predictions for quercetin
+dc_high <- search_target2np_drugclip(
+  search = "quercetin",
+  search_field = "compound_name",
+  confidence = "high"
+)
+dc_high
+
+# Score-based filtering
+dc <- search_target2np_drugclip(
+  search = "EGFR",
+  search_field = "gene_symbol",
+  min_score = 0.7
+)
+dc
+```
+
+### SEA similarity-based predictions
+
+```{r sea}
+# High-confidence SEA predictions
+sea_high <- search_target2np_sea(
+  search = "quercetin",
+  search_field = "compound_name",
+  confidence = "high"
+)
+sea_high
+
+# Filter by adjusted p-value
+sea <- search_target2np_sea(
+  search = "TP53",
+  search_field = "gene_symbol",
+  max_pvalue = 0.01
+)
+sea
+```
+
+## Cross-source analysis
+
+### Multi-source summary
+
+The `target2np_multi_source_summary()` function queries experimental
+records, DrugCLIP, and SEA for the same term and returns an integrated
+overview: source counts, overlap statistics, confidence distributions,
+and cross-validated compound–target pairs.
+
+```{r multi-source}
+summary <- target2np_multi_source_summary(
+  search = "TP53",
+  search_field = "gene_symbol"
+)
+
+# How many results per source?
+summary$source_counts
+
+# Target overlap across data sources
+summary$target_overlap
+
+# Confidence-level distribution for each source
+summary$confidence_distribution
+
+# Compound-target pairs found in >= 2 sources
+summary$cross_validated
+
+# Natural-language interpretation
+cat(summary$suggestion_text)
+```
+
+### Aggregated view
+
+The aggregated view groups experimental interaction records by
+compound–target pair (InChIKey + UniProt ID) and returns pairs supported
+by multiple source databases. This is useful for identifying
+well-evidenced interactions.
+
+```{r aggregated}
+# Pairs seen in >= 3 databases
+agg <- aggregated_target2np(
+  search = "quercetin",
+  min_sources = 3
+)
+agg
+
+# Include DrugCLIP/SEA prediction counts as additional sources
+agg_pred <- aggregated_target2np(
+  search = "quercetin",
+  min_sources = 2,
+  include_predictions = TRUE
+)
+agg_pred
+```
+
+## Practical example: multi-evidence target prioritisation
+
+A common workflow is to start with a compound of interest, query all
+three data sources, and use cross-validation to prioritise targets.
+
+```{r workflow}
+# 1. Check experimental evidence
+exp <- search_target2np(
+  search = "quercetin",
+  search_field = "compound_name",
+  search_mode = "fuzzy",
+  all_pages = TRUE
+)
+nrow(exp)
+
+# 2. Get multi-source summary in one call
+ms <- target2np_multi_source_summary(
+  search = "quercetin",
+  search_field = "compound_name",
+  search_mode = "fuzzy"
+)
+ms$source_counts
+ms$cross_validated
+
+# 3. Batch-check the top cross-validated targets
+top_genes <- unique(vapply(
+  ms$cross_validated, `[[`, character(1), "gene_symbol"
+))
+if (length(top_genes) > 0) {
+  batch_detail <- batch_target2np(top_genes)
+  batch_detail
+}
+```

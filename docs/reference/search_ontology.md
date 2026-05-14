@@ -35,12 +35,7 @@ columns: `tcm_id`, `name`, `name_cn`, `level`, `path`, `match_field`,
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 search_ontology("Qi stagnation")
-#> # A tibble: 2 × 7
-#>   tcm_id      name                     name_cn level path  match_field highlight
-#>   <chr>       <chr>                    <chr>   <int> <chr> <chr>       <chr>    
-#> 1 TCM:0405008 Qi Stagnation Constitut… 气郁质      3 Trad… name        Qi Stagn…
-#> 2 TCM:0602008 Qi Stagnation Patterns   气滞证      3 Trad… name        Qi Stagn…
-# }
+} # }
 ```

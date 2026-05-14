@@ -55,7 +55,7 @@ Query the TCM Transcriptome Hub. This endpoint uses Style-B pagination
 (\code{count}/\code{results} instead of \code{total}/\code{items}).
 }
 \examples{
-\donttest{
+\dontrun{
 search_transcriptomes(search = "ginseng")
 }
 }

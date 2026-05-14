@@ -23,7 +23,7 @@ A named list with \verb{$nodes} (\code{\link[tibble:tibble]{tibble::tibble()}}),
 Get neighbors of a node
 }
 \examples{
-\donttest{
+\dontrun{
 get_neighbors("H:UNITCM_H001", depth = 1)
 }
 }

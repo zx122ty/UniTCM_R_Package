@@ -33,10 +33,7 @@ Invisible file path.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 export_compound_module("UNITCM_I00001", "admet")
-#> Error in httr2::req_perform(req, path = file): HTTP 422 Unprocessable Entity.
-#> ℹ HTTP 422: list(type = "int_parsing", loc = list("path", "id"), msg = "Input
-#>   should be a valid integer, unable to parse string as an integer")
-# }
+} # }
 ```

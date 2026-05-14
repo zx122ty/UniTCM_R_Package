@@ -49,7 +49,7 @@ Perform Fisher's exact test enrichment analysis to identify diseases
 significantly associated with a gene list.
 }
 \examples{
-\donttest{
+\dontrun{
 query_disease_enrichment(c("TP53", "BRCA1", "EGFR", "VEGFA"))
 }
 }

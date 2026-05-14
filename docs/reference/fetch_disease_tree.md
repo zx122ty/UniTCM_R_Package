@@ -17,9 +17,8 @@ A recursive nested list with structure
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 tree <- fetch_disease_tree()
 names(tree[[1]])
-#> NULL
-# }
+} # }
 ```

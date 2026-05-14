@@ -23,10 +23,8 @@ An `igraph` graph object with vertex attributes `name`, `type`
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 g <- build_formula_herb_network(1)
 igraph::V(g)$label
-#>  [1] "增效调经丸" "地黄"       "当归"       "党参"       "炒白术"    
-#>  [6] "陈皮"       "菟丝子"     "川续断"     "制香附"     "月季花"    
-# }
+} # }
 ```

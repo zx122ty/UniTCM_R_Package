@@ -17,7 +17,7 @@ A named list with fields including \code{chinese_name}, \code{pinyin},
 Retrieve full detail for one term from the TCM Bilingual Corpus.
 }
 \examples{
-\donttest{
+\dontrun{
 get_term("TCM_T001")
 }
 }

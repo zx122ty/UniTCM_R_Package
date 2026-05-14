@@ -12,7 +12,6 @@ Maintainer: Xiao Zheng <12519088@zju.edu.cn>
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.3
 Depends: R (>= 4.1.0)
 Imports:
     httr2 (>= 1.0.0),
@@ -38,3 +37,4 @@ URL: https://zx122ty.github.io/UniTCM_R_Package/,
 BugReports: https://github.com/zx122ty/UniTCM_R_Package/issues
 VignetteBuilder: knitr
 Config/testthat/edition: 3
+Config/roxygen2/version: 8.0.0

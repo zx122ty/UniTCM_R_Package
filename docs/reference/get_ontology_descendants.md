@@ -25,9 +25,7 @@ A [`tibble::tibble()`](https://rdrr.io/pkg/tibble/man/tibble.html).
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 get_ontology_descendants("TCM_0001", max_level = 2)
-#> Error in httr2::req_perform(req): HTTP 404 Not Found.
-#> ℹ Resource not found: Not Found
-# }
+} # }
 ```
