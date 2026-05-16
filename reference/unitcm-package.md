@@ -1,7 +1,7 @@
 # unitcm: R Client for the UniTCM Traditional Chinese Medicine Platform
 
 Provides functions to query the UniTCM API
-<https://unitcm.qfxulab.com/api/v1>, covering herb exploration,
+(<https://unitcm.qfxulab.com>), covering herb exploration,
 compound/ADMET data, disease-formula associations, TCM ontology,
 transcriptomics, and gene-disease analysis (MIDAS).
 

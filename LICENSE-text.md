@@ -1,4 +1,4 @@
 # License
 
     YEAR: 2026
-    COPYRIGHT HOLDER: Xiao zheng
+    COPYRIGHT HOLDER: Xiao Zheng
