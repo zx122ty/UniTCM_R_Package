@@ -8,7 +8,7 @@
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-Provides functions to query the UniTCM API \url{https://unitcm.qfxulab.com/api/v1}, covering herb exploration, compound/ADMET data, disease-formula associations, TCM ontology, transcriptomics, and gene-disease analysis (MIDAS).
+Provides functions to query the UniTCM API (\url{https://unitcm.qfxulab.com}), covering herb exploration, compound/ADMET data, disease-formula associations, TCM ontology, transcriptomics, and gene-disease analysis (MIDAS).
 }
 \seealso{
 Useful links:
