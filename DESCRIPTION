@@ -1,5 +1,5 @@
 Package: unitcm
-Version: 0.1.0
+Version: 0.1.1
 Title: R Client for the UniTCM Traditional Chinese Medicine Platform
 Description: Provides functions to query the UniTCM API
     (<https://unitcm.qfxulab.com>), covering herb exploration,
