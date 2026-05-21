@@ -14,7 +14,7 @@ A named list of tibbles, one per facet field
 Returns available filter values and their counts for the Herb Explorer.
 }
 \examples{
-\dontrun{
+\donttest{
 facets <- fetch_herb_facets()
 facets$toxicity
 }

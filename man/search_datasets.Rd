@@ -62,7 +62,7 @@ Query the TCMomics multi-omics database with optional text search and
 faceted filters.
 }
 \examples{
-\dontrun{
+\donttest{
 search_datasets(q = "ginseng", omics = "Transcriptomics")
 }
 }

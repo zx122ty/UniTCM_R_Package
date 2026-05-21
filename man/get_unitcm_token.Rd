@@ -14,7 +14,7 @@ Checks in order: (1) session value set via \code{\link[=set_unitcm_token]{set_un
 (2) environment variable \code{UNITCM_TOKEN}, (3) system keyring.
 }
 \examples{
-\dontrun{
+\donttest{
 get_unitcm_token()
 }
 }

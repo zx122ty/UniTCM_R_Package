@@ -31,7 +31,7 @@ Given herb names or IDs, fetches herb-compound-target data from the API
 and constructs a typed \code{igraph} network.
 }
 \examples{
-\dontrun{
+\donttest{
 g <- build_hct_network(c("UNITCM_H001", "UNITCM_H002"))
 igraph::vcount(g)
 }

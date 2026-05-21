@@ -17,7 +17,7 @@ Removes the API key from session memory and optionally from the system
 keyring.
 }
 \examples{
-\dontrun{
+\donttest{
 clear_api_key()
 }
 }

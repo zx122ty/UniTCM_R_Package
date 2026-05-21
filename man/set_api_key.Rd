@@ -19,7 +19,7 @@ Stores the API key in session memory. Optionally also stores it in the
 system keyring (requires the \pkg{keyring} package).
 }
 \examples{
-\dontrun{
+\donttest{
 set_api_key("unitcm_your_key_here")
 }
 }

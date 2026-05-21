@@ -18,7 +18,7 @@ Retrieve full detail including nested persons, publications, grants,
 and data files.
 }
 \examples{
-\dontrun{
+\donttest{
 get_dataset("TMA2025001")
 }
 }

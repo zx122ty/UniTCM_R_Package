@@ -21,7 +21,7 @@ A named list with \verb{$nodes} (\code{\link[tibble:tibble]{tibble::tibble()}}) 
 Find shortest path between two nodes
 }
 \examples{
-\dontrun{
+\donttest{
 find_path("H:UNITCM_H001", "T:TP53")
 }
 }

@@ -5,7 +5,7 @@
 #'   `institution`, `total_file_size`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' fetch_latest_submissions()
 #' }
 fetch_latest_submissions <- function() {
@@ -24,7 +24,7 @@ fetch_latest_submissions <- function() {
 #'   `total_file_size`, `recent_submissions_count`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' fetch_home_stats()
 #' }
 fetch_home_stats <- function() {
@@ -37,7 +37,7 @@ fetch_home_stats <- function() {
 #'   `percentage`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' fetch_tcm_classification_stats()
 #' }
 fetch_tcm_classification_stats <- function() {
@@ -55,7 +55,7 @@ fetch_tcm_classification_stats <- function() {
 #'   `percentage`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' fetch_omics_type_stats()
 #' }
 fetch_omics_type_stats <- function() {

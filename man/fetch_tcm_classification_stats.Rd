@@ -14,7 +14,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} with columns: \code{classificati
 Get TCM classification statistics
 }
 \examples{
-\dontrun{
+\donttest{
 fetch_tcm_classification_stats()
 }
 }

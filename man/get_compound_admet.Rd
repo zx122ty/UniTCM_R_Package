@@ -16,7 +16,7 @@ A single-row \code{\link[tibble:tibble]{tibble::tibble()}} with ~90 ADMET column
 Returns ~90 ADMET endpoint predictions as a single-row wide tibble.
 }
 \examples{
-\dontrun{
+\donttest{
 get_compound_admet("UNITCM_I00001")
 }
 }

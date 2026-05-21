@@ -4,7 +4,7 @@
 #'   `target`, `disease`) and `edges` sub-list.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' fetch_netvis_stats()
 #' }
 fetch_netvis_stats <- function() {
@@ -21,7 +21,7 @@ fetch_netvis_stats <- function() {
 #'   `label_cn`, `degree`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' search_netvis("ginseng", type = "herb")
 #' }
 search_netvis <- function(q, type = "all", limit = 20L) {
@@ -44,7 +44,7 @@ search_netvis <- function(q, type = "all", limit = 20L) {
 #'   ([tibble::tibble()]), and `$has_more`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' get_neighbors("H:UNITCM_H001", depth = 1)
 #' }
 get_neighbors <- function(node_id, depth = 1L, limit = 50L,
@@ -62,7 +62,7 @@ get_neighbors <- function(node_id, depth = 1L, limit = 50L,
 #'   ([tibble::tibble()]), and `$has_more`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' get_subgraph(c("H:UNITCM_H001", "C:UNITCM_I00001"))
 #' }
 get_subgraph <- function(node_ids, limit = 200L) {
@@ -80,7 +80,7 @@ get_subgraph <- function(node_ids, limit = 200L) {
 #'   ([tibble::tibble()]).
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' find_path("H:UNITCM_H001", "T:TP53")
 #' }
 find_path <- function(source, target, max_depth = 4L) {
@@ -98,7 +98,7 @@ find_path <- function(source, target, max_depth = 4L) {
 #'   `properties`, `detail_url`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' get_node_detail("H:UNITCM_H001")
 #' }
 get_node_detail <- function(node_id) {
@@ -111,7 +111,7 @@ get_node_detail <- function(node_id) {
 #' @return A named list with fields: `node_id`, `degree`, `neighbor_types`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' get_node_metrics("H:UNITCM_H001")
 #' }
 get_node_metrics <- function(node_id) {
@@ -128,7 +128,7 @@ get_node_metrics <- function(node_id) {
 #' @return A [tibble::tibble()] with columns `node_id` and `community_id`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' detect_communities(
 #'   nodes = c("A", "B", "C"),
 #'   edges = data.frame(source = c("A", "B"), target = c("B", "C"))

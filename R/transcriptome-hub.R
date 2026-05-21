@@ -19,7 +19,7 @@
 #' @return A [tibble::tibble()] of datasets with attribute `"total"`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' search_transcriptomes(search = "ginseng")
 #' }
 search_transcriptomes <- function(search = NULL, tcm_classification = NULL,
@@ -63,7 +63,7 @@ search_transcriptomes <- function(search = NULL, tcm_classification = NULL,
 #' @return A named list with 35+ fields.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' get_transcriptome("TCMtrans00001")
 #' }
 get_transcriptome <- function(dataset_id) {
@@ -75,7 +75,7 @@ get_transcriptome <- function(dataset_id) {
 #' @return A named list of character vectors for each filter field.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' filters <- fetch_transcriptome_filters()
 #' filters$organism
 #' }
@@ -89,7 +89,7 @@ fetch_transcriptome_filters <- function() {
 #'   `total_tcm_entities`, `total_analysis_modules`, plus distribution data.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' fetch_transcriptome_stats()
 #' }
 fetch_transcriptome_stats <- function() {
@@ -102,7 +102,7 @@ fetch_transcriptome_stats <- function() {
 #' @return A character vector of available module names.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' get_analysis_modules("TCMtrans00001")
 #' }
 get_analysis_modules <- function(dataset_id) {
@@ -125,7 +125,7 @@ get_analysis_modules <- function(dataset_id) {
 #'   ppi, pca, qc).
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' get_analysis_data("TCMtrans00001", "deg")
 #' get_analysis_data("TCMtrans00001", "expression", gene = "TP53")
 #' }

@@ -22,7 +22,7 @@
 #' @return A [tibble::tibble()] of herbs with attribute `"total"`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' search_herbs(q = "ginseng")
 #' search_herbs(flavors = c("sweet", "bitter"), page_size = 50)
 #' }
@@ -68,7 +68,7 @@ search_herbs <- function(q = NULL, therapeutic_en = NULL,
 #' @return A named list with 31 fields including cross-reference IDs.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' get_herb("UNITCM_H001")
 #' }
 get_herb <- function(herb_id) {
@@ -83,7 +83,7 @@ get_herb <- function(herb_id) {
 #'   (e.g. `therapeutic_en_class`, `family`, `toxicity`).
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' facets <- fetch_herb_facets()
 #' facets$toxicity
 #' }
@@ -111,7 +111,7 @@ fetch_herb_facets <- function() {
 #' @return A [tibble::tibble()] of compounds with attribute `"total"`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' get_herb_compounds("UNITCM_H001")
 #' }
 get_herb_compounds <- function(herb_id, page = 1L, page_size = 20L,
@@ -138,7 +138,7 @@ get_herb_compounds <- function(herb_id, page = 1L, page_size = 20L,
 #' @return Invisible file path.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' export_herbs(q = "ginseng", file = "ginseng_herbs.csv")
 #' }
 export_herbs <- function(q = NULL, therapeutic_en = NULL,
@@ -172,7 +172,7 @@ export_herbs <- function(q = NULL, therapeutic_en = NULL,
 #' @return Invisible file path.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' export_herb_compounds("UNITCM_H001")
 #' }
 export_herb_compounds <- function(herb_id,

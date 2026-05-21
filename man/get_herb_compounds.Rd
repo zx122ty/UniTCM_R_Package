@@ -22,7 +22,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} of compounds with attribute \cod
 List chemical compounds (ingredients) associated with a specific herb.
 }
 \examples{
-\dontrun{
+\donttest{
 get_herb_compounds("UNITCM_H001")
 }
 }

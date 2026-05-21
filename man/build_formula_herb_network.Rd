@@ -18,7 +18,7 @@ Given a formula order ID, fetches its herb doses and constructs a
 star-topology network.
 }
 \examples{
-\dontrun{
+\donttest{
 g <- build_formula_herb_network(1)
 igraph::V(g)$label
 }

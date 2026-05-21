@@ -45,7 +45,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} of mechanism terms with attribut
 Query the Terms Molecular Mechanisms database with optional filters.
 }
 \examples{
-\dontrun{
+\donttest{
 search_mechanisms(search = "Qi deficiency")
 }
 }

@@ -4,11 +4,11 @@
 \name{unitcm-package}
 \alias{unitcm}
 \alias{unitcm-package}
-\title{unitcm: R Client for the UniTCM Traditional Chinese Medicine Platform}
+\title{unitcm: Client for the 'UniTCM' Traditional Chinese Medicine Platform}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-Provides functions to query the UniTCM API (\url{https://unitcm.qfxulab.com}), covering herb exploration, compound/ADMET data, disease-formula associations, TCM ontology, transcriptomics, and gene-disease analysis (MIDAS).
+Provides functions to query the 'UniTCM' API (\url{https://unitcm.qfxulab.com}), covering herb exploration, compound/ADMET (Absorption, Distribution, Metabolism, Excretion, and Toxicity) data, disease-formula associations, Traditional Chinese Medicine (TCM) ontology, transcriptomics, and gene-disease analysis (MIDAS, Mining Integrated Disease Association Sources).
 }
 \seealso{
 Useful links:

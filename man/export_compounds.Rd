@@ -51,7 +51,7 @@ Download a CSV export of compounds matching the given filters
 (max 10,000 rows).
 }
 \examples{
-\dontrun{
+\donttest{
 export_compounds(mw_min = 200, file = "filtered_compounds.csv")
 }
 }

@@ -14,7 +14,7 @@ A named list with fields: \code{total_associations}, \code{total_genes},
 Get MIDAS statistics
 }
 \examples{
-\dontrun{
+\donttest{
 fetch_midas_stats()
 }
 }

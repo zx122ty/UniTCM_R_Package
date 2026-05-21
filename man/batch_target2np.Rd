@@ -24,7 +24,7 @@ Look up interaction records for up to 50 gene symbols, UniProt IDs, or
 Entrez gene IDs in one call.
 }
 \examples{
-\dontrun{
+\donttest{
 batch_target2np(c("TP53", "BRCA1", "EGFR"))
 batch_target2np(c("P04637", "P38398"), id_type = "uniprot_id")
 }

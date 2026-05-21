@@ -36,7 +36,7 @@ A \code{ggplot} object.
 Visualize an \code{igraph} or \code{tbl_graph} object using \code{ggraph}.
 }
 \examples{
-\dontrun{
+\donttest{
 g <- build_hct_network("UNITCM_H001")
 plot_network(g)
 }

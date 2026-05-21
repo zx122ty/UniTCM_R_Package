@@ -16,7 +16,7 @@ A recursive nested list: \code{list(tcm_id, name, name_cn, level, children = lis
 Returns the full ontology as a recursive nested list.
 }
 \examples{
-\dontrun{
+\donttest{
 tree <- fetch_ontology_tree(depth = 2)
 }
 }

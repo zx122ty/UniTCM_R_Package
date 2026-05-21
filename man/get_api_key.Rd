@@ -14,7 +14,7 @@ Checks in order: (1) session value set via \code{\link[=set_api_key]{set_api_key
 (2) environment variable \code{UNITCM_API_KEY}, (3) system keyring.
 }
 \examples{
-\dontrun{
+\donttest{
 get_api_key()
 }
 }

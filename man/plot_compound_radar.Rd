@@ -23,7 +23,7 @@ Create a radar/spider chart of normalized physicochemical properties
 for a compound.
 }
 \examples{
-\dontrun{
+\donttest{
 plot_compound_radar("UNITCM_I00001")
 }
 }

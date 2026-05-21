@@ -14,7 +14,7 @@ A named list with node counts (\code{formula}, \code{herb}, \code{compound},
 Get NetVis network statistics
 }
 \examples{
-\dontrun{
+\donttest{
 fetch_netvis_stats()
 }
 }

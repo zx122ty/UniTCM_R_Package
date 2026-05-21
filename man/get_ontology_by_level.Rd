@@ -18,7 +18,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}}.
 Get ontology entities by level
 }
 \examples{
-\dontrun{
+\donttest{
 get_ontology_by_level(2)
 }
 }

@@ -17,7 +17,7 @@ Recursively flattens a nested list into a single-row tibble. Nested lists
 that cannot be further flattened are kept as list-columns.
 }
 \examples{
-\dontrun{
+\donttest{
 herb <- get_herb("UNITCM_H001")
 flatten_response(herb)
 }

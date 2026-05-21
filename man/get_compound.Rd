@@ -16,7 +16,7 @@ A named list with 26+ fields including an \code{xref} sub-list.
 Retrieve full detail for one compound including cross-references.
 }
 \examples{
-\dontrun{
+\donttest{
 get_compound("UNITCM_I00001")
 }
 }

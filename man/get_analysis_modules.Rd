@@ -16,7 +16,7 @@ A character vector of available module names.
 List available analysis modules for a dataset
 }
 \examples{
-\dontrun{
+\donttest{
 get_analysis_modules("TCMtrans00001")
 }
 }

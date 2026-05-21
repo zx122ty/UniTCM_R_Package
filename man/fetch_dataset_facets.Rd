@@ -14,7 +14,7 @@ Returns available filter values and their counts for the TCMomics
 database.
 }
 \examples{
-\dontrun{
+\donttest{
 facets <- fetch_dataset_facets()
 facets$omics_type
 }

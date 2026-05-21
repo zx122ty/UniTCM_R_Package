@@ -22,7 +22,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} with columns: \code{id}, \code{t
 Search NetVis nodes
 }
 \examples{
-\dontrun{
+\donttest{
 search_netvis("ginseng", type = "herb")
 }
 }

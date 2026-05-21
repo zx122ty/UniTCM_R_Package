@@ -16,7 +16,7 @@ A named list with 35+ fields.
 Get a single transcriptome dataset
 }
 \examples{
-\dontrun{
+\donttest{
 get_transcriptome("TCMtrans00001")
 }
 }

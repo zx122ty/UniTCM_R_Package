@@ -18,7 +18,7 @@
 #' @return A [tibble::tibble()] of compounds with attribute `"total"`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' search_compounds(q = "quercetin")
 #' search_compounds(mw_min = 200, mw_max = 500, lipinski = "pass")
 #' }
@@ -64,7 +64,7 @@ search_compounds <- function(q = NULL, mw_min = NULL, mw_max = NULL,
 #' @return A named list with 26+ fields including an `xref` sub-list.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' get_compound("UNITCM_I00001")
 #' }
 get_compound <- function(id) {
@@ -80,7 +80,7 @@ get_compound <- function(id) {
 #' @return A single-row [tibble::tibble()] with ~90 ADMET columns.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' get_compound_admet("UNITCM_I00001")
 #' }
 get_compound_admet <- function(id) {
@@ -102,7 +102,7 @@ get_compound_admet <- function(id) {
 #'   `source` column is added to distinguish results.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' get_compound_targets("UNITCM_I00001")
 #' get_compound_targets("UNITCM_I00001", method = "both")
 #' }
@@ -151,7 +151,7 @@ get_compound_targets <- function(id, method = c("drugclip", "chembl", "both"),
 #' @return A [tibble::tibble()] of herbs with attribute `"total"`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' get_compound_herbs("UNITCM_I00001")
 #' }
 get_compound_herbs <- function(id, page = 1L, page_size = 20L,
@@ -179,7 +179,7 @@ get_compound_herbs <- function(id, page = 1L, page_size = 20L,
 #'   `tpsa_range`, `qed_range`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' fetch_compound_facets()
 #' }
 fetch_compound_facets <- function() {
@@ -196,7 +196,7 @@ fetch_compound_facets <- function() {
 #' @return Invisible file path.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' export_compounds(mw_min = 200, file = "filtered_compounds.csv")
 #' }
 export_compounds <- function(q = NULL, mw_min = NULL, mw_max = NULL,
@@ -231,7 +231,7 @@ export_compounds <- function(q = NULL, mw_min = NULL, mw_max = NULL,
 #' @return Invisible file path.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' export_compound_module("UNITCM_I00001", "admet")
 #' }
 export_compound_module <- function(id,

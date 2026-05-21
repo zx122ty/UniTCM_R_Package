@@ -19,7 +19,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} with columns \code{node_id} and 
 POST a graph (nodes + edges) to the server for community detection.
 }
 \examples{
-\dontrun{
+\donttest{
 detect_communities(
   nodes = c("A", "B", "C"),
   edges = data.frame(source = c("A", "B"), target = c("B", "C"))

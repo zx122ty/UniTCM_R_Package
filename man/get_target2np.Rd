@@ -16,7 +16,7 @@ A named list of interaction fields.
 Retrieve the full detail for one compound-target interaction record.
 }
 \examples{
-\dontrun{
+\donttest{
 get_target2np(1)
 }
 }

@@ -17,7 +17,7 @@ An \code{igraph} graph object.
 Convert a NetVis graph response to igraph
 }
 \examples{
-\dontrun{
+\donttest{
 resp <- get_neighbors("H:UNITCM_H001")
 g <- as_igraph(resp)
 }

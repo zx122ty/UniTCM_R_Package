@@ -35,7 +35,7 @@ confidence distributions, cross-validated compound-target pairs, and
 an interpretive suggestion string.
 }
 \examples{
-\dontrun{
+\donttest{
 summary <- target2np_multi_source_summary(
   search = "TP53", search_field = "gene_symbol"
 )

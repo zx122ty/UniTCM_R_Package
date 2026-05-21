@@ -14,7 +14,7 @@ A named list with fields: \code{total_datasets}, \code{total_organisms},
 Get Transcriptome Hub statistics
 }
 \examples{
-\dontrun{
+\donttest{
 fetch_transcriptome_stats()
 }
 }

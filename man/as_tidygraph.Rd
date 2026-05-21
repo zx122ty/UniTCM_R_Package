@@ -17,7 +17,7 @@ A \code{tidygraph::tbl_graph} object.
 Convert a NetVis graph response to tidygraph
 }
 \examples{
-\dontrun{
+\donttest{
 resp <- get_neighbors("H:UNITCM_H001")
 tg <- as_tidygraph(resp)
 }

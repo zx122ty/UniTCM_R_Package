@@ -23,7 +23,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} with columns: \code{tcm_id}, \co
 Full-text search across TCM ontology entities.
 }
 \examples{
-\dontrun{
+\donttest{
 search_ontology("Qi stagnation")
 }
 }

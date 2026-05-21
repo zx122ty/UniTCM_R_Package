@@ -14,7 +14,7 @@ Returns counts and distributions across source databases, evidence
 levels, target organisms, and activity types.
 }
 \examples{
-\dontrun{
+\donttest{
 stats <- fetch_target2np_stats()
 stats$total_records
 }

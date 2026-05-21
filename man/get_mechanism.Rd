@@ -18,7 +18,7 @@ Retrieve full detail for one term including nested arrays of biomarkers,
 pathways, gene targets, metabolites, etc.
 }
 \examples{
-\dontrun{
+\donttest{
 get_mechanism("TMM001")
 }
 }

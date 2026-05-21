@@ -13,7 +13,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} of level-1 entities.
 List top-level ontology categories
 }
 \examples{
-\dontrun{
+\donttest{
 list_ontology_categories()
 }
 }

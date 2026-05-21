@@ -17,7 +17,7 @@ Removes the token from session memory and optionally from the system
 keyring.
 }
 \examples{
-\dontrun{
+\donttest{
 clear_unitcm_token()
 }
 }

@@ -40,7 +40,7 @@ Query SEA-style predictions derived from ChEMBL similarity scoring,
 with optional adjusted p-value filtering.
 }
 \examples{
-\dontrun{
+\donttest{
 search_target2np_sea(search = "quercetin", confidence = "high")
 }
 }

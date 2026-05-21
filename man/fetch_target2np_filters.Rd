@@ -16,7 +16,7 @@ Returns the controlled values used by the Target2NP filter UI
 types, and top activity types).
 }
 \examples{
-\dontrun{
+\donttest{
 opts <- fetch_target2np_filters()
 opts$source_db
 }

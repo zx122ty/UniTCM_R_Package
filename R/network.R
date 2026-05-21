@@ -13,7 +13,7 @@
 #'   (`"herb"`, `"compound"`, `"target"`), and `label`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' g <- build_hct_network(c("UNITCM_H001", "UNITCM_H002"))
 #' igraph::vcount(g)
 #' }
@@ -103,7 +103,7 @@ build_hct_network <- function(herbs, target_method = "drugclip",
 #'   (`"formula"`, `"herb"`), `label`, and `dose` (for herbs).
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' g <- build_formula_herb_network(1)
 #' igraph::V(g)$label
 #' }
@@ -153,7 +153,7 @@ build_formula_herb_network <- function(formula_id) {
 #' @return An `igraph` graph object.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' resp <- get_neighbors("H:UNITCM_H001")
 #' g <- as_igraph(resp)
 #' }
@@ -238,7 +238,7 @@ as_igraph <- function(graph_response) {
 #' @return A `tidygraph::tbl_graph` object.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' resp <- get_neighbors("H:UNITCM_H001")
 #' tg <- as_tidygraph(resp)
 #' }

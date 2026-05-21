@@ -18,7 +18,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} with columns: \code{id}, \code{h
 Retrieve the composition and dosage information for a specific formula.
 }
 \examples{
-\dontrun{
+\donttest{
 get_formula_doses(1)
 }
 }

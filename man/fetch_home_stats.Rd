@@ -14,7 +14,7 @@ A named list with fields: \code{total_datasets}, \code{total_downloads},
 Get homepage statistics
 }
 \examples{
-\dontrun{
+\donttest{
 fetch_home_stats()
 }
 }

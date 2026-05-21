@@ -11,7 +11,7 @@
 #' @return A [tibble::tibble()] of terms with attribute `"total"`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' search_terms(q = "ginseng")
 #' }
 search_terms <- function(q = NULL, sources = NULL, category = NULL,
@@ -45,7 +45,7 @@ search_terms <- function(q = NULL, sources = NULL, category = NULL,
 #'   `english_name`, `latin_name`, `description_english`, etc.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' get_term("TCM_T001")
 #' }
 get_term <- function(term_id) {
@@ -57,7 +57,7 @@ get_term <- function(term_id) {
 #' @return A [tibble::tibble()] with columns `value`, `label`, `count`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' list_term_sources()
 #' }
 list_term_sources <- function() {
@@ -74,7 +74,7 @@ list_term_sources <- function() {
 #' @return A [tibble::tibble()] with columns `value`, `label`, `count`.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' list_term_categories()
 #' }
 list_term_categories <- function() {

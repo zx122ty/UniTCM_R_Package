@@ -17,7 +17,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} with columns: \code{tcm_id}, \co
 Get ancestors of an ontology entity
 }
 \examples{
-\dontrun{
+\donttest{
 get_ontology_ancestors("TCM_0001")
 }
 }

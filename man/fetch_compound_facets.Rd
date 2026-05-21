@@ -16,7 +16,7 @@ Returns summary statistics and filter option counts for the Ingredient
 Explorer.
 }
 \examples{
-\dontrun{
+\donttest{
 fetch_compound_facets()
 }
 }

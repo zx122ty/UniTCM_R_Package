@@ -7,7 +7,7 @@
 #' @return A single-row [tibble::tibble()].
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' herb <- get_herb("UNITCM_H001")
 #' flatten_response(herb)
 #' }
