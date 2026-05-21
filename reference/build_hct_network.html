@@ -81,64 +81,10 @@ and constructs a typed <code>igraph</code> network.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
 <span class="r-in"><span><span class="va">g</span> <span class="op">&lt;-</span> <span class="fu">build_hct_network</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"UNITCM_H001"</span>, <span class="st">"UNITCM_H002"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Fetching compounds for <span style="color: #0000BB;">"UNITCM_H001"</span>...</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Fetching targets for <span style="color: #0000BB;">"14-deacetyl-14-isobutyrylajadine"</span>...</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Fetching targets for <span style="color: #0000BB;">"14-deacetyl-14-isobutyrylnudicauline"</span>...</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Fetching targets for <span style="color: #0000BB;">"14-deacetylajadine"</span>...</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Fetching targets for <span style="color: #0000BB;">"14-deacetylnudicauline"</span>...</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Fetching targets for <span style="color: #0000BB;">"14-demethyltuguaconitine"</span>...</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Fetching targets for <span style="color: #0000BB;">"Ajacine"</span>...</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Fetching targets for <span style="color: #0000BB;">"Delbonine"</span>...</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Fetching targets for <span style="color: #0000BB;">"Delcosine"</span>...</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Fetching targets for <span style="color: #0000BB;">"Deltatsine"</span>...</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Fetching targets for <span style="color: #0000BB;">"Methyllycaconitine"</span>...</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Fetching targets for <span style="color: #0000BB;">"Nudicauline"</span>...</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Fetching targets for <span style="color: #0000BB;">"ajadine"</span>...</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Fetching compounds for <span style="color: #0000BB;">"UNITCM_H002"</span>...</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Fetching targets for <span style="color: #0000BB;">"Acteoside"</span>...</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Fetching targets for <span style="color: #0000BB;">"Echinacoside"</span>...</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in igraph::graph_from_data_frame(edge_df, directed = FALSE, vertices = node_df):</span> Some vertex names in `d` are not listed in `vertices`</span>
 <span class="r-in"><span><span class="fu">igraph</span><span class="fu">::</span><span class="fu"><a href="https://r.igraph.org/reference/gorder.html" class="external-link">vcount</a></span><span class="op">(</span><span class="va">g</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'g' not found</span>
-<span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

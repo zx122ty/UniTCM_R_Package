@@ -18,8 +18,7 @@ A character string.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 get_base_url()
-#> [1] "https://unitcm.qfxulab.com/api/v1"
-# }
+} # }
 ```

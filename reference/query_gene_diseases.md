@@ -67,35 +67,7 @@ the gene ID resolution mapping.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 query_gene_diseases(c("TP53", "BRCA1"))
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-#> # A tibble: 20 × 12
-#>    gene_symbol ensembl_id      entrez_id uniprot_id disease_name      disease_id
-#>    <chr>       <chr>           <chr>     <chr>      <chr>             <chr>     
-#>  1 BRCA1       ENSG00000012048 672       P38398     Organ system can… DOID:0050…
-#>  2 BRCA1       ENSG00000012048 672       P38398     Ovarian disease   DOID:1100 
-#>  3 BRCA1       ENSG00000012048 672       P38398     Female reproduct… DOID:120  
-#>  4 BRCA1       ENSG00000012048 672       P38398     Disease of cellu… DOID:14566
-#>  5 BRCA1       ENSG00000012048 672       P38398     Cancer            DOID:162  
-#>  6 BRCA1       ENSG00000012048 672       P38398     Gonadal disease   DOID:2277 
-#>  7 BRCA1       ENSG00000012048 672       P38398     Ovarian cancer    DOID:2394 
-#>  8 BRCA1       ENSG00000012048 672       P38398     ICD10:C           ICD10:C   
-#>  9 BRCA1       ENSG00000012048 672       P38398     ICD10:C5          ICD10:C5  
-#> 10 BRCA1       ENSG00000012048 672       P38398     ICD10:C56         ICD10:C56 
-#> 11 BRCA1       ENSG00000012048 672       P38398     ICD10:C57         ICD10:C57 
-#> 12 BRCA1       ENSG00000012048 672       P38398     ICD10:C8          ICD10:C8  
-#> 13 BRCA1       ENSG00000012048 672       P38398     Reproductive org… DOID:193  
-#> 14 BRCA1       ENSG00000012048 672       P38398     Disease of anato… DOID:7    
-#> 15 BRCA1       ENSG00000012048 672       P38398     Female reproduct… DOID:229  
-#> 16 BRCA1       ENSG00000012048 672       P38398     Disease           DOID:4    
-#> 17 BRCA1       ENSG00000012048 672       P38398     Reproductive sys… DOID:15   
-#> 18 BRCA1       ENSG00000012048 672       P38398     Endocrine system… DOID:28   
-#> 19 BRCA1       ENSG00000012048 672       P38398     Cell type cancer  DOID:0050…
-#> 20 BRCA1       ENSG00000012048 672       P38398     Carcinoma         DOID:305  
-#> # ℹ 6 more variables: disease_ids_by_source <df[,3]>, source_count <int>,
-#> #   sources_detail <list>, aggregated_score <dbl>, total_pubmed_count <int>,
-#> #   scoring_method <chr>
-# }
+} # }
 ```

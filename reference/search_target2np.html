@@ -126,51 +126,11 @@ BindingDB, HERB2, NPASS, BATMAN, and others.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
 <span class="r-in"><span><span class="fu">search_target2np</span><span class="op">(</span>search <span class="op">=</span> <span class="st">"quercetin"</span><span class="op">)</span></span></span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 20 × 15</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    record_id source_db evidence_level evidence_label   compound_name pubchem_cid</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span>      <span style="text-decoration: underline;">1</span>459 HIT2                   2 Experimental bi… Isoquercetin  5280804    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span>      <span style="text-decoration: underline;">1</span>460 HIT2                   2 Experimental bi… Isoquercetin  5280804    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span>      <span style="text-decoration: underline;">1</span>461 HIT2                   2 Experimental bi… Isoquercetin  5280804    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span>      <span style="text-decoration: underline;">3</span>112 HIT2                   2 Experimental bi… Quercetin     5280343    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>      <span style="text-decoration: underline;">3</span>113 HIT2                   2 Experimental bi… Quercetin     5280343    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>      <span style="text-decoration: underline;">3</span>114 HIT2                   2 Experimental bi… Quercetin     5280343    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>      <span style="text-decoration: underline;">3</span>115 HIT2                   2 Experimental bi… Quercetin     5280343    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>      <span style="text-decoration: underline;">3</span>116 HIT2                   2 Experimental bi… Quercetin     5280343    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>      <span style="text-decoration: underline;">3</span>117 HIT2                   2 Experimental bi… Quercetin     5280343    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>      <span style="text-decoration: underline;">3</span>118 HIT2                   2 Experimental bi… Quercetin     5280343    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">11</span>      <span style="text-decoration: underline;">3</span>119 HIT2                   2 Experimental bi… Quercetin     5280343    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">12</span>      <span style="text-decoration: underline;">3</span>120 HIT2                   2 Experimental bi… Quercetin     5280343    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">13</span>      <span style="text-decoration: underline;">3</span>121 HIT2                   2 Experimental bi… Quercetin     5280343    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">14</span>      <span style="text-decoration: underline;">3</span>122 HIT2                   2 Experimental bi… Quercetin     5280343    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">15</span>      <span style="text-decoration: underline;">3</span>123 HIT2                   2 Experimental bi… Quercetin     5280343    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">16</span>      <span style="text-decoration: underline;">3</span>124 HIT2                   2 Experimental bi… Quercetin     5280343    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">17</span>      <span style="text-decoration: underline;">3</span>125 HIT2                   2 Experimental bi… Quercetin     5280343    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">18</span>      <span style="text-decoration: underline;">3</span>126 HIT2                   2 Experimental bi… Quercetin     5280343    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">19</span>      <span style="text-decoration: underline;">3</span>127 HIT2                   2 Experimental bi… Quercetin     5280343    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">20</span>      <span style="text-decoration: underline;">3</span>128 HIT2                   2 Experimental bi… Quercetin     5280343    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 9 more variables: gene_symbol &lt;chr&gt;, protein_name &lt;chr&gt;, uniprot_id &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   target_organism &lt;chr&gt;, interaction_type &lt;chr&gt;, activity_type &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   activity_value &lt;lgl&gt;, activity_units &lt;chr&gt;, unitcm_ingredient_id &lt;int&gt;</span></span>
 <span class="r-in"><span><span class="fu">search_target2np</span><span class="op">(</span>search <span class="op">=</span> <span class="st">"TP53"</span>, search_field <span class="op">=</span> <span class="st">"gene_symbol"</span>,</span></span>
 <span class="r-in"><span>                 source_db <span class="op">=</span> <span class="st">"BindingDB"</span><span class="op">)</span></span></span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 4 × 15</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   record_id source_db evidence_level evidence_label    compound_name pubchem_cid</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>     <span style="text-decoration: underline;">29</span>484 BindingDB              5 Computational/Pa… US9403827, 8  90303398   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span>     <span style="text-decoration: underline;">53</span>403 BindingDB              2 Experimental bin… CHEMBL3422267 101911084  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span>     <span style="text-decoration: underline;">53</span>404 BindingDB              2 Experimental bin… CHEMBL3422268 118735492  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span>     <span style="text-decoration: underline;">99</span>938 BindingDB              2 Experimental bin… CHEMBL4162051 133082032  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 9 more variables: gene_symbol &lt;chr&gt;, protein_name &lt;chr&gt;, uniprot_id &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   target_organism &lt;chr&gt;, interaction_type &lt;chr&gt;, activity_type &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   activity_value &lt;dbl&gt;, activity_units &lt;chr&gt;, unitcm_ingredient_id &lt;lgl&gt;</span></span>
-<span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

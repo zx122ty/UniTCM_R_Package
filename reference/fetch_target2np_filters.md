@@ -18,11 +18,8 @@ A named list with fields `source_db`, `evidence_label`,
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 opts <- fetch_target2np_filters()
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
 opts$source_db
-#> [1] "BATMAN-TCM" "BindingDB"  "HERB2"      "HIT2"       "NPASS"     
-# }
+} # }
 ```

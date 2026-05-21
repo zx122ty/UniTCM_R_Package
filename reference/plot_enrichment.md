@@ -53,11 +53,8 @@ A `ggplot` object.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 enrich <- query_disease_enrichment(c("TP53", "BRCA1", "EGFR"))
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
 plot_enrichment(enrich)
-
-# }
+} # }
 ```

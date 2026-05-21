@@ -16,11 +16,8 @@ A named list with `total_records` and four distribution lists.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 stats <- fetch_target2np_stats()
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
 stats$total_records
-#> [1] 911912
-# }
+} # }
 ```

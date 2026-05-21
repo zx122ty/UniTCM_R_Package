@@ -93,41 +93,11 @@ predictions as additional supporting sources.</p></dd>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
 <span class="r-in"><span><span class="fu">aggregated_target2np</span><span class="op">(</span>search <span class="op">=</span> <span class="st">"quercetin"</span><span class="op">)</span></span></span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 20 × 10</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    inchikey       uniprot_id compound_name gene_symbol protein_name source_count</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> LUJAXSNNYBCFE… Q9NPH5     3',4',5-trih… NOX4        NADPH oxida…            2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> OVSQVDMCBVZWG… P18031     2-(3,4-dihyd… PTPN1       Tyrosine-pr…            2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> REFJWTPEDVJJI… O15296     2-(3,4-dihyd… ALOX15B     Polyunsatur…            2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> REFJWTPEDVJJI… O15438     2-(3,4-dihyd… ABCC3       ATP-binding…            2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> REFJWTPEDVJJI… O15439     2-(3,4-dihyd… ABCC4       ATP-binding…            2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> REFJWTPEDVJJI… O43451     2-(3,4-dihyd… MGAM        Maltase-glu…            2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> REFJWTPEDVJJI… O43570     2-(3,4-dihyd… CA12        Carbonic an…            2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> REFJWTPEDVJJI… O60285     2-(3,4-dihyd… NUAK1       NUAK family…            2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> REFJWTPEDVJJI… O60341     2-(3,4-dihyd… KDM1A       Lysine-spec…            2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> REFJWTPEDVJJI… O94956     2-(3,4-dihyd… SLCO2B1     Solute carr…            2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">11</span> REFJWTPEDVJJI… O95342     2-(3,4-dihyd… ABCB11      Bile salt e…            2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">12</span> REFJWTPEDVJJI… P00390     2-(3,4-dihyd… GSR         Glutathione…            2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">13</span> REFJWTPEDVJJI… P00533     2-(3,4-dihyd… EGFR        Epidermal g…            2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">14</span> REFJWTPEDVJJI… P00734     2-(3,4-dihyd… F2          Prothrombin             2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">15</span> REFJWTPEDVJJI… P00749     2-(3,4-dihyd… PLAU        Urokinase-t…            2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">16</span> REFJWTPEDVJJI… P00915     2-(3,4-dihyd… CA1         Carbonic an…            2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">17</span> REFJWTPEDVJJI… P00918     2-(3,4-dihyd… CA2         Carbonic an…            2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">18</span> REFJWTPEDVJJI… P03956     2-(3,4-dihyd… MMP1        Interstitia…            2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">19</span> REFJWTPEDVJJI… P04054     2-(3,4-dihyd… PLA2G1B     Phospholipa…            2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">20</span> LUJAXSNNYBCFE… P00747     3',4',5-trih… PLG         Plasminogen             2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 4 more variables: sources &lt;list&gt;, best_evidence_level &lt;int&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   evidence_labels &lt;list&gt;, activity_values &lt;list&gt;</span></span>
 <span class="r-in"><span><span class="fu">aggregated_target2np</span><span class="op">(</span>search <span class="op">=</span> <span class="st">"TP53"</span>, min_sources <span class="op">=</span> <span class="fl">3</span>,</span></span>
 <span class="r-in"><span>                     include_predictions <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 0 × 0</span></span>
-<span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

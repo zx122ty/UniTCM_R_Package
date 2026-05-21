@@ -33,9 +33,7 @@ Invisible file path.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 export_compound_module("UNITCM_I00001", "admet")
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
-# }
+} # }
 ```

@@ -105,36 +105,9 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
 <span class="r-in"><span><span class="fu">search_mechanisms</span><span class="op">(</span>search <span class="op">=</span> <span class="st">"Qi deficiency"</span><span class="op">)</span></span></span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Selecting ‘env’ backend. Secrets are stored in environment variables</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 20 × 10</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    tcm_term_id tcm_term_cn tcm_term_en tcm_term_category_ch tcm_term_category_en</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span>          17 脾气        spleen qi   脏腑                 Zang-Fu Organ       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span>         165 气          Qi          脏腑                 Zang-Fu Organ       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span>         194 气          Qi          脏腑                 Zang-Fu Organ       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span>         291 中气        Central Qi  脏腑                 Zang-Fu Organ       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>         387 气虚        Qi deficie… 证型                 Syndrome Pattern    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>         397 气虚        qi deficie… 证型                 Syndrome Pattern    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>         420 气虚血瘀证  Qi Deficie… 证型                 Syndrome Pattern    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>         536 气虚        Qi deficie… 证型                 Syndrome Pattern    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>         636 心气虚      Xin-qi def… 证型                 Syndrome Pattern    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>         669 肾气虚      kidney-qi … 证型                 Syndrome Pattern    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">11</span>         929 肺气虚      Fei-qi def… 证型                 Syndrome Pattern    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">12</span>         930 肺阴虚      Fei-yin de… 证型                 Syndrome Pattern    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">13</span>         970 气虚        qi deficie… 证型                 Syndrome Pattern    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">14</span>        <span style="text-decoration: underline;">1</span>112 气虚        deficiency… 证型                 Syndrome Pattern    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">15</span>        <span style="text-decoration: underline;">1</span>214 气虚        Qi deficie… 证型                 Syndrome Pattern    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">16</span>        <span style="text-decoration: underline;">1</span>230 血瘀证      blood stag… 证型                 Syndrome Pattern    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">17</span>        <span style="text-decoration: underline;">1</span>244 气虚        qi deficie… 证型                 Syndrome Pattern    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">18</span>        <span style="text-decoration: underline;">1</span>334 气虚        qi deficie… 证型                 Syndrome Pattern    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">19</span>        <span style="text-decoration: underline;">1</span>347 气虚        qi deficie… 证型                 Syndrome Pattern    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">20</span>        <span style="text-decoration: underline;">1</span>350 气虚血瘀    qi deficie… 证型                 Syndrome Pattern    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 5 more variables: western_disease_name &lt;chr&gt;, mapping_relationship &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   confidence_level &lt;chr&gt;, evidence_level &lt;chr&gt;, pathophysiology_summary &lt;chr&gt;</span></span>
-<span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
