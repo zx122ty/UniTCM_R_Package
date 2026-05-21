@@ -79,7 +79,9 @@ Invisible file path.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 export_datasets(omics = "Transcriptomics", file = "transcriptomics.csv")
-} # }
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+# }
 ```

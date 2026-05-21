@@ -17,7 +17,9 @@ A character string, or `NULL` if no token is found.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 get_unitcm_token()
-} # }
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> NULL
+# }
 ```

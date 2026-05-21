@@ -16,8 +16,16 @@ A named list of tibbles, one per facet field (e.g.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 facets <- fetch_herb_facets()
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
 facets$toxicity
-} # }
+#> # A tibble: 3 × 2
+#>   value           count
+#>   <chr>           <int>
+#> 1 Toxic              47
+#> 2 Extremely Toxic    32
+#> 3 Slightly Toxic     12
+# }
 ```

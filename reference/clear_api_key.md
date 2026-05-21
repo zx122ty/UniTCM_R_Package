@@ -22,7 +22,8 @@ Invisible `NULL`.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 clear_api_key()
-} # }
+#> API key cleared from session.
+# }
 ```

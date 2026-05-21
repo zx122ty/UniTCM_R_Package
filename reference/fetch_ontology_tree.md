@@ -22,7 +22,9 @@ A recursive nested list:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 tree <- fetch_ontology_tree(depth = 2)
-} # }
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+# }
 ```

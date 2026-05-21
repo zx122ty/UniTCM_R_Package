@@ -7,14 +7,14 @@
 
 ## Citation
 
-Zheng X (2026). *unitcm: R Client for the UniTCM Traditional Chinese
-Medicine Platform*. R package version 0.1.0,
+Zheng X (2026). *unitcm: Client for the 'UniTCM' Traditional Chinese
+Medicine Platform*. R package version 0.1.2,
 <https://zx122ty.github.io/UniTCM_R_Package/>.
 
     @Manual{,
-      title = {unitcm: R Client for the UniTCM Traditional Chinese Medicine Platform},
+      title = {unitcm: Client for the 'UniTCM' Traditional Chinese Medicine Platform},
       author = {Xiao Zheng},
       year = {2026},
-      note = {R package version 0.1.0},
+      note = {R package version 0.1.2},
       url = {https://zx122ty.github.io/UniTCM_R_Package/},
     }

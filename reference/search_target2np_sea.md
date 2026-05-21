@@ -59,7 +59,36 @@ of SEA predictions with attribute `"total"`.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 search_target2np_sea(search = "quercetin", confidence = "high")
-} # }
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> # A tibble: 20 × 16
+#>        id compound_id compound_name             smiles inchikey target_chembl_id
+#>     <int>       <int> <chr>                     <lgl>  <lgl>    <chr>           
+#>  1 121863       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL4878      
+#>  2 121864       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL5393      
+#>  3 121865       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL215       
+#>  4 121866       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL2231      
+#>  5 121867       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL4302      
+#>  6 121868       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL3356      
+#>  7 121869       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL1951      
+#>  8 121870       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL1929      
+#>  9 121871       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL4523488   
+#> 10 121872       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL1865      
+#> 11 121873       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL3242      
+#> 12 121874       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL2326      
+#> 13 121875       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL3885525   
+#> 14 121876       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL1900      
+#> 15 121877       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL3004      
+#> 16 121878       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL3729      
+#> 17 121879       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL1974      
+#> 18 121880       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL205       
+#> 19 121881       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL242       
+#> 20 121882       40270 3',4'-dimethoxy quercetin NA     NA       CHEMBL4822      
+#> # ℹ 10 more variables: target_pref_name <chr>, uniprot_id <chr>,
+#> #   gene_symbol <chr>, sea_pvalue <dbl>, pvalue_adjusted <dbl>,
+#> #   sea_zscore <dbl>, max_tanimoto <dbl>, n_similar_ligands <int>,
+#> #   confidence_level <chr>, unitcm_ingredient_id <int>
+# }
 ```

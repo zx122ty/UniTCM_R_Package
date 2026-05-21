@@ -28,7 +28,10 @@ of matched TCM entities.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 search_ontology_mapping("MeSH", "D008516")
-} # }
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> # A tibble: 0 × 0
+# }
 ```

@@ -1,1 +1,13 @@
-{"detail": [{"type": "int_parsing", "loc": ["path", "herb_id"], "msg": "Input should be a valid integer, unable to parse string as an integer"}]}
+﻿UniTCM_ingredient_id,component_name,source
+36597,14-deacetyl-14-isobutyrylajadine,paper
+36596,14-deacetyl-14-isobutyrylnudicauline,paper
+36599,14-deacetylajadine,paper
+36598,14-deacetylnudicauline,paper
+36595,14-demethyltuguaconitine,paper
+77,Ajacine,paper
+13519,Delbonine,paper
+13524,Delcosine,paper
+13553,Deltatsine,paper
+9671,Methyllycaconitine,paper
+1843,Nudicauline,paper
+36600,ajadine,paper

@@ -23,7 +23,11 @@ A named list with sub-elements: `ancestors`, `children`,
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 get_ontology_entity("TCM_0001")
-} # }
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Error in httr2::req_perform(req): HTTP 404 Not Found.
+#> ℹ Resource not found: Not Found
+# }
 ```

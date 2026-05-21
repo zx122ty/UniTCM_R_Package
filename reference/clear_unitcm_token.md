@@ -22,7 +22,8 @@ Invisible `NULL`.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 clear_unitcm_token()
-} # }
+#> Token cleared from session.
+# }
 ```

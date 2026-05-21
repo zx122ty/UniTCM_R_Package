@@ -35,7 +35,24 @@ of compounds with attribute `"total"`.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 get_herb_compounds("UNITCM_H001")
-} # }
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> # A tibble: 12 × 3
+#>    unitcm_ingredient_id component_name                       source
+#>                   <int> <chr>                                <chr> 
+#>  1                36597 14-deacetyl-14-isobutyrylajadine     paper 
+#>  2                36596 14-deacetyl-14-isobutyrylnudicauline paper 
+#>  3                36599 14-deacetylajadine                   paper 
+#>  4                36598 14-deacetylnudicauline               paper 
+#>  5                36595 14-demethyltuguaconitine             paper 
+#>  6                   77 Ajacine                              paper 
+#>  7                13519 Delbonine                            paper 
+#>  8                13524 Delcosine                            paper 
+#>  9                13553 Deltatsine                           paper 
+#> 10                 9671 Methyllycaconitine                   paper 
+#> 11                 1843 Nudicauline                          paper 
+#> 12                36600 ajadine                              paper 
+# }
 ```

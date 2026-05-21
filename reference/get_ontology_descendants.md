@@ -26,7 +26,11 @@ A
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 get_ontology_descendants("TCM_0001", max_level = 2)
-} # }
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Error in httr2::req_perform(req): HTTP 404 Not Found.
+#> ℹ Resource not found: Not Found
+# }
 ```

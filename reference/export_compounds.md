@@ -74,7 +74,12 @@ Invisible file path.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 export_compounds(mw_min = 200, file = "filtered_compounds.csv")
-} # }
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Error in httr2::req_perform(req, path = file): HTTP 400 Bad Request.
+#> ℹ Bad request: Result set contains 30134 records, exceeding the 10,000 limit.
+#>   Please download the full dataset from Zenodo: https://zenodo.org
+# }
 ```

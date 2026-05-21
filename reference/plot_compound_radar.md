@@ -30,7 +30,10 @@ A `ggplot` object.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 plot_compound_radar("UNITCM_I00001")
-} # }
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+
+# }
 ```

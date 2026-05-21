@@ -35,7 +35,12 @@ gene vectors), `$intersections`, `$exclusives`, `$genes_used`.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 query_source_comparison(c("TP53", "BRCA1"), mode = "union")
-} # }
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Error in httr2::req_perform(req): HTTP 422 Unprocessable Entity.
+#> ℹ HTTP 422: list(type = "missing", loc = list("body", "body", "sources"), msg =
+#>   "Field required")
+# }
 ```

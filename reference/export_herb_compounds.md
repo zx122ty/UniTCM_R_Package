@@ -25,7 +25,9 @@ Invisible file path.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 export_herb_compounds("UNITCM_H001")
-} # }
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+# }
 ```

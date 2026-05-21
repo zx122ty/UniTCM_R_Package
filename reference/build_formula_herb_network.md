@@ -23,8 +23,14 @@ An `igraph` graph object with vertex attributes `name`, `type`
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 g <- build_formula_herb_network(1)
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
 igraph::V(g)$label
-} # }
+#>  [1] "增效调经丸" "地黄"       "当归"       "党参"       "炒白术"    
+#>  [6] "陈皮"       "菟丝子"     "川续断"     "制香附"     "月季花"    
+# }
 ```

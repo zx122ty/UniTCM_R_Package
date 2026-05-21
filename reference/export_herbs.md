@@ -73,7 +73,9 @@ Invisible file path.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 export_herbs(q = "ginseng", file = "ginseng_herbs.csv")
-} # }
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+# }
 ```

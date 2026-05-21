@@ -46,11 +46,21 @@ A named list with fields `source_counts`, `target_overlap`,
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 summary <- target2np_multi_source_summary(
   search = "TP53", search_field = "gene_symbol"
 )
 summary$source_counts
+#> $experimental
+#> [1] 920
+#> 
+#> $drugclip
+#> [1] 0
+#> 
+#> $sea
+#> [1] 16
+#> 
 summary$suggestion_text
-} # }
+#> [1] "Your search returned 936 total interactions across 2 data source(s): experimental (920), sea (16)."
+# }
 ```

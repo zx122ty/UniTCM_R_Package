@@ -24,7 +24,11 @@ with columns: `submission_id`, `project_title`, `TCM_classification`,
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 get_similar_datasets("TMA2025001")
-} # }
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Error in httr2::req_perform(req): HTTP 404 Not Found.
+#> ℹ Resource not found: Not Found
+# }
 ```

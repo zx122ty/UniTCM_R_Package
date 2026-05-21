@@ -22,7 +22,8 @@ Invisible previous URL value.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 set_base_url("https://unitcm.qfxulab.com/api/v1")
-} # }
+#> UniTCM base URL set to <https://unitcm.qfxulab.com/api/v1>
+# }
 ```

@@ -17,7 +17,9 @@ A character string, or `NULL` if no API key is found.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 get_api_key()
-} # }
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> NULL
+# }
 ```

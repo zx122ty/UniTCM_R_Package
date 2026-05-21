@@ -25,8 +25,10 @@ An `igraph` graph object.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 resp <- get_neighbors("H:UNITCM_H001")
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
+#> Warning: Selecting ‘env’ backend. Secrets are stored in environment variables
 g <- as_igraph(resp)
-} # }
+# }
 ```
