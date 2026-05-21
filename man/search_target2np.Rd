@@ -58,7 +58,7 @@ interactions, combining records from experimental sources such as
 BindingDB, HERB2, NPASS, BATMAN, and others.
 }
 \examples{
-\donttest{
+\dontrun{
 search_target2np(search = "quercetin")
 search_target2np(search = "TP53", search_field = "gene_symbol",
                  source_db = "BindingDB")

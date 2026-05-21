@@ -52,7 +52,7 @@ Invisible file path.
 Download a CSV export of datasets matching the given filters.
 }
 \examples{
-\donttest{
+\dontrun{
 export_datasets(omics = "Transcriptomics", file = "transcriptomics.csv")
 }
 }

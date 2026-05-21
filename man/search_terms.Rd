@@ -33,7 +33,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} of terms with attribute \code{"t
 Query the TCM Bilingual Corpus with optional text search and filters.
 }
 \examples{
-\donttest{
+\dontrun{
 search_terms(q = "ginseng")
 }
 }

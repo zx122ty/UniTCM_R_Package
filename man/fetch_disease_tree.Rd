@@ -15,7 +15,7 @@ Returns the full 4-level ICD-11 disease classification tree used by the
 Disease-Formula Atlas.
 }
 \examples{
-\donttest{
+\dontrun{
 tree <- fetch_disease_tree()
 names(tree[[1]])
 }

@@ -58,7 +58,7 @@ filters. Multi-value filter parameters accept character vectors and are
 collapsed to semicolon-separated strings internally.
 }
 \examples{
-\donttest{
+\dontrun{
 search_herbs(q = "ginseng")
 search_herbs(flavors = c("sweet", "bitter"), page_size = 50)
 }

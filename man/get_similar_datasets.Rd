@@ -17,7 +17,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} with columns: \code{submission_i
 Find datasets similar to a given submission based on content similarity.
 }
 \examples{
-\donttest{
+\dontrun{
 get_similar_datasets("TMA2025001")
 }
 }

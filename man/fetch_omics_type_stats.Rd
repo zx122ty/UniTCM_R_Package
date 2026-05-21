@@ -14,7 +14,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} with columns: \code{omics_type},
 Get omics type statistics
 }
 \examples{
-\donttest{
+\dontrun{
 fetch_omics_type_stats()
 }
 }

@@ -17,7 +17,7 @@ Convert a mixed list of gene identifiers (symbols, Entrez IDs, Ensembl
 IDs) to a standardized mapping.
 }
 \examples{
-\donttest{
+\dontrun{
 convert_gene_ids(c("TP53", "7157", "ENSG00000141510"))
 }
 }

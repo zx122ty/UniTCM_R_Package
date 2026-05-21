@@ -18,7 +18,7 @@ Retrieve full detail for one entity including ancestors, children,
 external mappings, and relations.
 }
 \examples{
-\donttest{
+\dontrun{
 get_ontology_entity("TCM_0001")
 }
 }

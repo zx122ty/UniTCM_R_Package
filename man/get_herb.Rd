@@ -16,7 +16,7 @@ A named list with 31 fields including cross-reference IDs.
 Retrieve full detail for one herb from the Herb Explorer.
 }
 \examples{
-\donttest{
+\dontrun{
 get_herb("UNITCM_H001")
 }
 }

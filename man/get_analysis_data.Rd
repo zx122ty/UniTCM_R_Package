@@ -25,7 +25,7 @@ Retrieve data for a specific analysis module. Return type varies by
 module.
 }
 \examples{
-\donttest{
+\dontrun{
 get_analysis_data("TCMtrans00001", "deg")
 get_analysis_data("TCMtrans00001", "expression", gene = "TP53")
 }

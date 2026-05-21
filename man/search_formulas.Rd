@@ -47,7 +47,7 @@ disease classification filters. Multi-value parameters accept character
 vectors and are collapsed to comma-separated strings internally.
 }
 \examples{
-\donttest{
+\dontrun{
 search_formulas(q = "insomnia")
 search_formulas(level1 = "Neoplasms", mapping_confidence = "high")
 }

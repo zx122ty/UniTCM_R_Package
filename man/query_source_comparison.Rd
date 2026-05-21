@@ -27,7 +27,7 @@ Compare how different evidence sources cover a gene list, producing
 Venn-diagram-ready set data.
 }
 \examples{
-\donttest{
+\dontrun{
 query_source_comparison(c("TP53", "BRCA1"), mode = "union")
 }
 }

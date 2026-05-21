@@ -30,7 +30,7 @@ Retrieve target predictions from DrugCLIP, ChEMBL similarity search,
 or both.
 }
 \examples{
-\donttest{
+\dontrun{
 get_compound_targets("UNITCM_I00001")
 get_compound_targets("UNITCM_I00001", method = "both")
 }

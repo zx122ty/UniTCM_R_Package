@@ -23,7 +23,7 @@
 #'   `"total"`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' search_target2np(search = "quercetin")
 #' search_target2np(search = "TP53", search_field = "gene_symbol",
 #'                  source_db = "BindingDB")
@@ -76,7 +76,7 @@ search_target2np <- function(search = NULL,
 #' @return A named list of interaction fields.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_target2np(1)
 #' }
 get_target2np <- function(record_id) {
@@ -93,7 +93,7 @@ get_target2np <- function(record_id) {
 #'   `target_organism`, `interaction_type`, `activity_type`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' opts <- fetch_target2np_filters()
 #' opts$source_db
 #' }
@@ -109,7 +109,7 @@ fetch_target2np_filters <- function() {
 #' @return A named list with `total_records` and four distribution lists.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' stats <- fetch_target2np_stats()
 #' stats$total_records
 #' }
@@ -129,7 +129,7 @@ fetch_target2np_stats <- function() {
 #'   `"total"`, `"queries_matched"`, and `"queries_not_found"`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' batch_target2np(c("TP53", "BRCA1", "EGFR"))
 #' batch_target2np(c("P04637", "P38398"), id_type = "uniprot_id")
 #' }
@@ -168,7 +168,7 @@ batch_target2np <- function(identifiers,
 #' @return A [tibble::tibble()] of aggregated pairs with attribute `"total"`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' aggregated_target2np(search = "quercetin")
 #' aggregated_target2np(search = "TP53", min_sources = 3,
 #'                      include_predictions = TRUE)
@@ -211,7 +211,7 @@ aggregated_target2np <- function(search = NULL, target_organism = NULL,
 #'   `"total"`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' search_target2np_drugclip(search = "quercetin", confidence = "high")
 #' }
 search_target2np_drugclip <- function(search = NULL,
@@ -264,7 +264,7 @@ search_target2np_drugclip <- function(search = NULL,
 #' @return A [tibble::tibble()] of SEA predictions with attribute `"total"`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' search_target2np_sea(search = "quercetin", confidence = "high")
 #' }
 search_target2np_sea <- function(search = NULL,
@@ -318,7 +318,7 @@ search_target2np_sea <- function(search = NULL,
 #'   and `suggestion_text`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' summary <- target2np_multi_source_summary(
 #'   search = "TP53", search_field = "gene_symbol"
 #' )

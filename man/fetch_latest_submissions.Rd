@@ -15,7 +15,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} of recent submissions with colum
 Get latest submissions
 }
 \examples{
-\donttest{
+\dontrun{
 fetch_latest_submissions()
 }
 }

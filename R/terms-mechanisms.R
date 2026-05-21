@@ -15,7 +15,7 @@
 #' @return A [tibble::tibble()] of mechanism terms with attribute `"total"`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' search_mechanisms(search = "Qi deficiency")
 #' }
 search_mechanisms <- function(search = NULL, category = NULL,
@@ -57,7 +57,7 @@ search_mechanisms <- function(search = NULL, category = NULL,
 #'   `signaling_pathways`, `gene_targets`) are returned as-is (lists).
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_mechanism("TMM001")
 #' }
 get_mechanism <- function(term_id) {
@@ -74,7 +74,7 @@ get_mechanism <- function(term_id) {
 #'   Each is a [tibble::tibble()] with columns `value`, `label`, `count`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' filters <- fetch_mechanism_filters()
 #' filters$categories
 #' }

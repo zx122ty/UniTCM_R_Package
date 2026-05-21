@@ -16,7 +16,7 @@
 #' @return A [tibble::tibble()] of formulas with attribute `"total"`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' search_formulas(q = "insomnia")
 #' search_formulas(level1 = "Neoplasms", mapping_confidence = "high")
 #' }
@@ -60,7 +60,7 @@ search_formulas <- function(q = NULL, level1 = NULL, level2 = NULL,
 #' @return A named list with 30+ fields.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_formula(1)
 #' }
 get_formula <- function(order_id) {
@@ -77,7 +77,7 @@ get_formula <- function(order_id) {
 #'   `clinical_ref_dose_g`, `dynasty`, `notes`, `herb_ids`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_formula_doses(1)
 #' }
 get_formula_doses <- function(order_id) {
@@ -98,7 +98,7 @@ get_formula_doses <- function(order_id) {
 #'   `list(label, count, children = list(...))`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' tree <- fetch_disease_tree()
 #' names(tree[[1]])
 #' }
@@ -111,7 +111,7 @@ fetch_disease_tree <- function() {
 #' @return A [tibble::tibble()] with columns `value`, `label`, `count`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' list_book_sources()
 #' }
 list_book_sources <- function() {
@@ -126,7 +126,7 @@ list_book_sources <- function() {
 #' @return A [tibble::tibble()] with columns `value`, `label`, `count`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' list_origin_sources()
 #' }
 list_origin_sources <- function() {
@@ -141,7 +141,7 @@ list_origin_sources <- function() {
 #' @return A [tibble::tibble()] with columns `value`, `label`, `count`.
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' list_dosage_forms()
 #' }
 list_dosage_forms <- function() {

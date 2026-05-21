@@ -37,7 +37,7 @@ by interaction records in at least \code{min_sources} source databases.
 Optionally extends each pair with DrugCLIP / SEA prediction support.
 }
 \examples{
-\donttest{
+\dontrun{
 aggregated_target2np(search = "quercetin")
 aggregated_target2np(search = "TP53", min_sources = 3,
                      include_predictions = TRUE)

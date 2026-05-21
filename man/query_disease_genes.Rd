@@ -38,7 +38,7 @@ Given a disease query, find associated genes across multiple evidence
 sources.
 }
 \examples{
-\donttest{
+\dontrun{
 query_disease_genes("breast cancer")
 }
 }

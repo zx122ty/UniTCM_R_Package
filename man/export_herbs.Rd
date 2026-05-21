@@ -50,7 +50,7 @@ Invisible file path.
 Download a CSV export of herbs matching the given filters.
 }
 \examples{
-\donttest{
+\dontrun{
 export_herbs(q = "ginseng", file = "ginseng_herbs.csv")
 }
 }

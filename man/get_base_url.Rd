@@ -15,7 +15,7 @@ Checks in order: (1) session value set via \code{\link[=set_base_url]{set_base_u
 (4) hardcoded default.
 }
 \examples{
-\donttest{
+\dontrun{
 get_base_url()
 }
 }

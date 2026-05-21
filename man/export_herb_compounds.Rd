@@ -18,7 +18,7 @@ Invisible file path.
 Download a CSV export of all compounds for a specific herb.
 }
 \examples{
-\donttest{
+\dontrun{
 export_herb_compounds("UNITCM_H001")
 }
 }

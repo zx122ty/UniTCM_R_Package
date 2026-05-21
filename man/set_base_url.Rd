@@ -17,7 +17,7 @@ Invisible previous URL value.
 Set the UniTCM API base URL
 }
 \examples{
-\donttest{
+\dontrun{
 set_base_url("https://unitcm.qfxulab.com/api/v1")
 }
 }

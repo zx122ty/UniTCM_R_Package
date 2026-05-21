@@ -25,7 +25,7 @@ Invisible file path.
 Download a CSV of a specific data module for one compound.
 }
 \examples{
-\donttest{
+\dontrun{
 export_compound_module("UNITCM_I00001", "admet")
 }
 }

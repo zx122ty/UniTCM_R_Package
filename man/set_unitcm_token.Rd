@@ -19,7 +19,7 @@ Stores the token in session memory. Optionally also stores it in the
 system keyring (requires the \pkg{keyring} package).
 }
 \examples{
-\donttest{
+\dontrun{
 set_unitcm_token("my-secret-token")
 }
 }

@@ -41,7 +41,7 @@ Query DrugCLIP deep-learning predictions, with optional confidence
 filtering by predicted score.
 }
 \examples{
-\donttest{
+\dontrun{
 search_target2np_drugclip(search = "quercetin", confidence = "high")
 }
 }

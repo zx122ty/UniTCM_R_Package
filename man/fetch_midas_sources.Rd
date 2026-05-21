@@ -14,7 +14,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} with columns: \code{key}, \code{
 List all available gene-disease association databases.
 }
 \examples{
-\donttest{
+\dontrun{
 fetch_midas_sources()
 }
 }

@@ -14,7 +14,7 @@ A named list with fields: \code{total_entities}, \code{total_level1}--
 Fetch ontology statistics
 }
 \examples{
-\donttest{
+\dontrun{
 fetch_ontology_stats()
 }
 }

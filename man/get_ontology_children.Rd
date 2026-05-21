@@ -17,7 +17,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} with columns: \code{tcm_id}, \co
 Get children of an ontology entity
 }
 \examples{
-\donttest{
+\dontrun{
 get_ontology_children("TCM_0001")
 }
 }

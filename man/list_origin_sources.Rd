@@ -13,7 +13,7 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} with columns \code{value}, \code
 Returns the top 50 formula origin sources by frequency.
 }
 \examples{
-\donttest{
+\dontrun{
 list_origin_sources()
 }
 }
