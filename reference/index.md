@@ -243,6 +243,44 @@ Quick plotting helpers.
 - [`plot_compound_radar()`](https://zx122ty.github.io/UniTCM_R_Package/reference/plot_compound_radar.md)
   : Plot compound physicochemical radar chart
 
+## PPI & Enrichment
+
+Protein-protein interaction networks and GO/KEGG enrichment via STRING
+and Enrichr APIs.
+
+- [`query_string_ppi()`](https://zx122ty.github.io/UniTCM_R_Package/reference/query_string_ppi.md)
+  : Query the STRING database for protein-protein interactions
+- [`build_ppi_network()`](https://zx122ty.github.io/UniTCM_R_Package/reference/build_ppi_network.md)
+  : Build a PPI network as an igraph object
+- [`identify_hub_genes()`](https://zx122ty.github.io/UniTCM_R_Package/reference/identify_hub_genes.md)
+  : Identify hub genes by degree centrality
+- [`louvain_cluster()`](https://zx122ty.github.io/UniTCM_R_Package/reference/louvain_cluster.md)
+  : Detect communities in a PPI network using the Louvain algorithm
+- [`enrichr_enrichment()`](https://zx122ty.github.io/UniTCM_R_Package/reference/enrichr_enrichment.md)
+  : Perform GO and KEGG pathway enrichment via the Enrichr API
+
+## Network Separation
+
+Network-based separation analysis (Menche et al. 2015) to quantify
+drug-target-to-disease-module proximity.
+
+- [`set_distance()`](https://zx122ty.github.io/UniTCM_R_Package/reference/set_distance.md)
+  : Compute closest distance between two gene sets in a network
+- [`self_distance()`](https://zx122ty.github.io/UniTCM_R_Package/reference/self_distance.md)
+  : Compute mean internal distance of a gene set
+- [`network_separation()`](https://zx122ty.github.io/UniTCM_R_Package/reference/network_separation.md)
+  : Compute the network separation score S_AB
+- [`per_node_distance()`](https://zx122ty.github.io/UniTCM_R_Package/reference/per_node_distance.md)
+  : Compute per-node closest distance to another gene set
+- [`find_elbow()`](https://zx122ty.github.io/UniTCM_R_Package/reference/find_elbow.md)
+  : Find the elbow (knee) point in a curve
+- [`find_saturation_point()`](https://zx122ty.github.io/UniTCM_R_Package/reference/find_saturation_point.md)
+  : Find the saturation point in a curve
+- [`network_separation_sweep()`](https://zx122ty.github.io/UniTCM_R_Package/reference/network_separation_sweep.md)
+  : Sweep network separation across top-N gene selection
+- [`network_separation_analysis()`](https://zx122ty.github.io/UniTCM_R_Package/reference/network_separation_analysis.md)
+  : Network separation analysis
+
 ## Target2NP
 
 Reverse target-to-natural-product search across DrugCLIP and SEA.

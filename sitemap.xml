@@ -6,6 +6,7 @@
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/articles/gene-disease-analysis.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/articles/index.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/articles/network-pharmacology.html</loc></url>
+<url><loc>https://zx122ty.github.io/UniTCM_R_Package/articles/ppi-enrichment.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/articles/target2np.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/articles/unitcm.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/authors.html</loc></url>
@@ -18,10 +19,12 @@
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/batch_target2np.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/build_formula_herb_network.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/build_hct_network.html</loc></url>
+<url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/build_ppi_network.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/clear_api_key.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/clear_unitcm_token.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/convert_gene_ids.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/detect_communities.html</loc></url>
+<url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/enrichr_enrichment.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/export_compound_module.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/export_compounds.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/export_datasets.html</loc></url>
@@ -47,7 +50,9 @@
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/fetch_tcm_classification_stats.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/fetch_transcriptome_filters.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/fetch_transcriptome_stats.html</loc></url>
+<url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/find_elbow.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/find_path.html</loc></url>
+<url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/find_saturation_point.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/flatten_response.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/get_analysis_data.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/get_analysis_modules.html</loc></url>
@@ -77,6 +82,7 @@
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/get_term.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/get_transcriptome.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/get_unitcm_token.html</loc></url>
+<url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/identify_hub_genes.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/index.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/list_book_sources.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/list_dosage_forms.html</loc></url>
@@ -84,6 +90,11 @@
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/list_origin_sources.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/list_term_categories.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/list_term_sources.html</loc></url>
+<url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/louvain_cluster.html</loc></url>
+<url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/network_separation.html</loc></url>
+<url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/network_separation_analysis.html</loc></url>
+<url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/network_separation_sweep.html</loc></url>
+<url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/per_node_distance.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/plot_compound_radar.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/plot_enrichment.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/plot_network.html</loc></url>
@@ -92,6 +103,7 @@
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/query_disease_intersection.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/query_gene_diseases.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/query_source_comparison.html</loc></url>
+<url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/query_string_ppi.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/search_compounds.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/search_datasets.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/search_formulas.html</loc></url>
@@ -105,8 +117,10 @@
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/search_target2np_sea.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/search_terms.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/search_transcriptomes.html</loc></url>
+<url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/self_distance.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/set_api_key.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/set_base_url.html</loc></url>
+<url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/set_distance.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/set_unitcm_token.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/target2np_multi_source_summary.html</loc></url>
 <url><loc>https://zx122ty.github.io/UniTCM_R_Package/reference/unitcm-package.html</loc></url>

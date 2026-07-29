@@ -15,3 +15,5 @@
   MIDAS](https://zx122ty.github.io/UniTCM_R_Package/articles/gene-disease-analysis.md):
 - [Target2NP: Compound–Target
   Interactions](https://zx122ty.github.io/UniTCM_R_Package/articles/target2np.md):
+- [PPI Network & Enrichment
+  Analysis](https://zx122ty.github.io/UniTCM_R_Package/articles/ppi-enrichment.md):

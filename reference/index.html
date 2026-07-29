@@ -773,6 +773,115 @@
         </dt>
         <dd>Plot compound physicochemical radar chart</dd>
       </dl></div><div class="section level2">
+      <h2 id="ppi-enrichment">PPI &amp; Enrichment<a class="anchor" aria-label="anchor" href="#ppi-enrichment"></a></h2>
+
+      <div class="section-desc"><p>Protein-protein interaction networks and GO/KEGG enrichment via STRING and Enrichr APIs.</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="query_string_ppi.html">query_string_ppi()</a></code>
+
+        </dt>
+        <dd>Query the STRING database for protein-protein interactions</dd>
+
+        <dt>
+
+          <code><a href="build_ppi_network.html">build_ppi_network()</a></code>
+
+        </dt>
+        <dd>Build a PPI network as an igraph object</dd>
+
+        <dt>
+
+          <code><a href="identify_hub_genes.html">identify_hub_genes()</a></code>
+
+        </dt>
+        <dd>Identify hub genes by degree centrality</dd>
+
+        <dt>
+
+          <code><a href="louvain_cluster.html">louvain_cluster()</a></code>
+
+        </dt>
+        <dd>Detect communities in a PPI network using the Louvain algorithm</dd>
+
+        <dt>
+
+          <code><a href="enrichr_enrichment.html">enrichr_enrichment()</a></code>
+
+        </dt>
+        <dd>Perform GO and KEGG pathway enrichment via the Enrichr API</dd>
+      </dl></div><div class="section level2">
+      <h2 id="network-separation">Network Separation<a class="anchor" aria-label="anchor" href="#network-separation"></a></h2>
+
+      <div class="section-desc"><p>Network-based separation analysis (Menche et al. 2015) to quantify drug-target-to-disease-module proximity.</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="set_distance.html">set_distance()</a></code>
+
+        </dt>
+        <dd>Compute closest distance between two gene sets in a network</dd>
+
+        <dt>
+
+          <code><a href="self_distance.html">self_distance()</a></code>
+
+        </dt>
+        <dd>Compute mean internal distance of a gene set</dd>
+
+        <dt>
+
+          <code><a href="network_separation.html">network_separation()</a></code>
+
+        </dt>
+        <dd>Compute the network separation score S_AB</dd>
+
+        <dt>
+
+          <code><a href="per_node_distance.html">per_node_distance()</a></code>
+
+        </dt>
+        <dd>Compute per-node closest distance to another gene set</dd>
+
+        <dt>
+
+          <code><a href="find_elbow.html">find_elbow()</a></code>
+
+        </dt>
+        <dd>Find the elbow (knee) point in a curve</dd>
+
+        <dt>
+
+          <code><a href="find_saturation_point.html">find_saturation_point()</a></code>
+
+        </dt>
+        <dd>Find the saturation point in a curve</dd>
+
+        <dt>
+
+          <code><a href="network_separation_sweep.html">network_separation_sweep()</a></code>
+
+        </dt>
+        <dd>Sweep network separation across top-N gene selection</dd>
+
+        <dt>
+
+          <code><a href="network_separation_analysis.html">network_separation_analysis()</a></code>
+
+        </dt>
+        <dd>Network separation analysis</dd>
+      </dl></div><div class="section level2">
       <h2 id="target-np">Target2NP<a class="anchor" aria-label="anchor" href="#target-np"></a></h2>
 
       <div class="section-desc"><p>Reverse target-to-natural-product search across DrugCLIP and SEA.</p></div>
@@ -854,7 +963,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
     </footer></div>
