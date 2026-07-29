@@ -150,6 +150,27 @@ reference:
   - plot_enrichment
   - plot_compound_radar
 
+- title: PPI & Enrichment
+  desc: Protein-protein interaction networks and GO/KEGG enrichment via STRING and Enrichr APIs.
+  contents:
+  - query_string_ppi
+  - build_ppi_network
+  - identify_hub_genes
+  - louvain_cluster
+  - enrichr_enrichment
+
+- title: Network Separation
+  desc: Network-based separation analysis (Menche et al. 2015) to quantify drug-target-to-disease-module proximity.
+  contents:
+  - set_distance
+  - self_distance
+  - network_separation
+  - per_node_distance
+  - find_elbow
+  - find_saturation_point
+  - network_separation_sweep
+  - network_separation_analysis
+
 - title: Target2NP
   desc: Reverse target-to-natural-product search across DrugCLIP and SEA.
   contents:
@@ -173,3 +194,4 @@ articles:
   - network-pharmacology
   - gene-disease-analysis
   - target2np
+  - ppi-enrichment
